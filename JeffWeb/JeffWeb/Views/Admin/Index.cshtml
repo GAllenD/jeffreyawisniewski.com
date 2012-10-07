@@ -1,0 +1,27 @@
+﻿@model JeffWeb.Models.View.BioForm
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Jeffrey A. Wisniewski | Admin</title>
+</head>
+    <body>
+        @using(Html.BeginForm("Save","Admin"))
+        {
+            <div>
+                <h2>Admin</h2>
+                <input type="submit" />
+                <table>
+                    <tr>
+                        <td>Bio Text</td>
+                        <td>@Html.TextAreaFor(m => m.BioText,new{rows = "100", cols="100"})</td>
+                    </tr>
+                </table>
+            </div>
+        }
+    </body>
+</html>
