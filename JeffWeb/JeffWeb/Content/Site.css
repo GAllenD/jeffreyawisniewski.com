@@ -1,0 +1,6 @@
+﻿body{ background-color: #404040 ; color: #E5E5E5}
+
+#Main_Container{ width: 988px;margin-left: auto; margin-right: auto}
+#Header_Container{ height: 100px;border-bottom: black solid 2px;}
+#Content_Container{}
+#Footer_Container{ text-align: center;font-size: 8pt}

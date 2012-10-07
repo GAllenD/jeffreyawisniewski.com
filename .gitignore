@@ -1,0 +1,10 @@
+
+_ReSharper.JeffreyWisniewskiWeb/ModuleIds.xml
+_ReSharper.*
+JeffreyWisniewskiWeb.5.1.ReSharper.user
+*.pdb
+JeffreyWisniewskiWeb/JeffreyWisniewskiWeb.csproj.user
+*.cache
+*FileListAbsolute.txt
+*.suo
+JeffreyWisniewskiWeb/obj/*
