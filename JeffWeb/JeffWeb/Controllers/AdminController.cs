@@ -14,27 +14,7 @@ namespace JeffWeb.Controllers
 
         public ActionResult Index()
         {
-            BioForm form;
-
-            if(Session["bioForm"] == null)
-            {
-                form = new BioForm{BioText = "This is my bio.</br>What do you think?"};
-            }
-            else
-            {
-                form = Session["bioForm"] as BioForm;
-            }
-
-            return View(form);
+            return View();
         }
-
-        [ValidateInput(false)]
-        public ActionResult Save(BioForm form)
-        {
-            Session["bioForm"] = form;
-
-            return View("index", form);
-        }
-
     }
 }
