@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Mvc.Html5
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,11 +17,12 @@
                 </div>
                 <div id="Navigation">
                     bio
-                    resume
+                    <a href="@Url.Content("~/Content/JeffreyAWisniewski_Resume.pdf")" target="_blank">resume</a>
                     gallery
                     film
                     voice
-                    press contact
+                    press 
+                    @Html.ActionLink("contact","Index","Contact")
                 </div>
             </div>
             <div id="Content_Container">

@@ -1,0 +1,30 @@
+﻿@using System.Web.Mvc.Html5
+@model JeffWeb.Models.View.ContactForm
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @using(Html.BeginForm("Send","Contact"))
+    {
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>@Html.TextBoxFor(m => m.Name)</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>@Html.Html5TextBox("ContactInfo",InputTypes.InputType.Email)/td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>@Html.TextBoxFor(m => m.Subject)</td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>@Html.TextAreaFor(m => m.Message)</td>
+            </tr>
+        </table>
+        <input type="submit" />
+    }
+</div>
