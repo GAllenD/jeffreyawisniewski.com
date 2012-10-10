@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace JeffWeb.Models.View
+﻿namespace JeffWeb.Models.View
 {
     public class ContactForm
     {
@@ -11,5 +6,6 @@ namespace JeffWeb.Models.View
         public string ContactInfo { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
+        public string SendStatusMessage { get; set; }
     }
 }
