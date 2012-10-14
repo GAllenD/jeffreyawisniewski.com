@@ -15,7 +15,7 @@
                 <div id="Logo">
                     <img src="@Url.Content("~/Content/images/logo.gif")"/>
                 </div>
-                <div id="Navigation">
+                <nav id="Navigation">
                     bio
                     <a href="@Url.Content("~/Content/JeffreyAWisniewski_Resume.pdf")" target="_blank">resume</a>
                     gallery
@@ -23,7 +23,7 @@
                     voice
                     press 
                     @Html.ActionLink("contact","Index","Contact")
-                </div>
+                </nav>
             </div>
             <div id="Content_Container">
                 @RenderBody()       

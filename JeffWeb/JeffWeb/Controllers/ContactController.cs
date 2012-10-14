@@ -32,7 +32,7 @@ namespace JeffWeb.Controllers
             {
                 var message = string.Concat("Email From:", form.Name, "(", form.ContactInfo, ")", Environment.NewLine, form.Message);
 
-                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", "gregdzezinski@gmail.com", form.Subject, message);
+                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", "jeffreyawisniewski@gmail.com", form.Subject, message);
 
                 _emailer.Send(mailMessage);
 

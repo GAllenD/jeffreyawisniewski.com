@@ -4,28 +4,36 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
+<div id="Contact_Content">
+    <address>
+        jeffreyawisniewski@gmail.com
+    </address>
+    <div id="Contact_Or_Break">
+        <img src="@Url.Content("~/Content/images/contact_or.png")"/>
+    </div>
+    <div id="Contact_Form">
     @using(Html.BeginForm("Send","Contact"))
     {
         @Model.SendStatusMessage
         <table>
             <tr>
                 <td>Name:</td>
-                <td>@Html.TextBoxFor(m => m.Name)</td>
+                <td>@Html.TextBoxFor(m => m.Name,new{size=125})</td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td>@Html.Html5TextBox("ContactInfo",InputTypes.InputType.Email)</td>
+                <td>@Html.Html5TextBox("ContactInfo",InputTypes.InputType.Email,new{size=125})</td>
             </tr>
             <tr>
                 <td>Subject:</td>
-                <td>@Html.TextBoxFor(m => m.Subject)</td>
+                <td>@Html.TextBoxFor(m => m.Subject,new{size=125})</td>
             </tr>
             <tr>
                 <td>Message:</td>
-                <td>@Html.TextAreaFor(m => m.Message)</td>
+                <td>@Html.TextAreaFor(m => m.Message,new{cols=94, rows=7})</td>
             </tr>
         </table>
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" id="Contact_Submit" />
     }
+    </div>
 </div>
