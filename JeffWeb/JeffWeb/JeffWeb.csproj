@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -64,9 +68,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -106,13 +107,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Services\Emailer.cs" />
-    <Compile Include="Models\View\BioForm.cs" />
-    <Compile Include="Models\View\ContactForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DataRepository.cs" />
+    <Compile Include="Services\Emailer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\images\contact_or.gif" />
     <Content Include="Content\images\contact_or.png" />
     <Content Include="Content\images\left_banner.jpg" />
@@ -209,10 +208,20 @@
     <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Domain\" />
+    <ProjectReference Include="..\Jeff.Data\Jeff.Data.csproj">
+      <Project>{f2a61051-7e13-4263-a59a-6774945cc5f0}</Project>
+      <Name>Jeff.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jeff.Model\Jeff.Model.csproj">
+      <Project>{3ca8b48e-ff2c-48f2-b838-971bb3e4e751}</Project>
+      <Name>Jeff.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

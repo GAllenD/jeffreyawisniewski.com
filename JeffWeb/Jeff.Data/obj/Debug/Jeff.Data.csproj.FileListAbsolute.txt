@@ -1,0 +1,5 @@
+C:\Workspace\jeffreyawisniewski.com\JeffWeb\Jeff.Data\bin\Debug\Jeff.Data.dll
+C:\Workspace\jeffreyawisniewski.com\JeffWeb\Jeff.Data\bin\Debug\Jeff.Data.pdb
+C:\Workspace\jeffreyawisniewski.com\JeffWeb\Jeff.Data\obj\Debug\Jeff.Data.csprojResolveAssemblyReference.cache
+C:\Workspace\jeffreyawisniewski.com\JeffWeb\Jeff.Data\obj\Debug\Jeff.Data.dll
+C:\Workspace\jeffreyawisniewski.com\JeffWeb\Jeff.Data\obj\Debug\Jeff.Data.pdb

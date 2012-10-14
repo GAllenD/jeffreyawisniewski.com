@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
+using Jeff.Model.View;
 using JeffWeb.Models.Services;
-using JeffWeb.Models.View;
 
 namespace JeffWeb.Controllers
 {
@@ -32,7 +29,7 @@ namespace JeffWeb.Controllers
             {
                 var message = string.Concat("Email From:", form.Name, "(", form.ContactInfo, ")", Environment.NewLine, form.Message);
 
-                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", "jeffreyawisniewski@gmail.com", form.Subject, message);
+                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", "gregdzezinski@gmail.com", form.Subject, message);
 
                 _emailer.Send(mailMessage);
 
