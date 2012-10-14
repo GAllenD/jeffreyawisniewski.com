@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JeffWebDBModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="PageConfigurations">
+      <EntityTypeMapping TypeName="JeffWebDBModel.PageConfiguration">
+        <MappingFragment StoreEntitySet="PageConfiguration">
+          <ScalarProperty Name="PageConfigurationIdentifier" ColumnName="PageConfigurationIdentifier" />
+          <ScalarProperty Name="Page" ColumnName="Page" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="MediaName" ColumnName="MediaName" />
+          <ScalarProperty Name="MediaUrl" ColumnName="MediaUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
