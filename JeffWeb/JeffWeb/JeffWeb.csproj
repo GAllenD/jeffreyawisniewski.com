@@ -103,12 +103,12 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BioController.cs" />
+    <Compile Include="Controllers\ConfigurableController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DataRepository.cs" />
     <Compile Include="Services\Emailer.cs" />
   </ItemGroup>
   <ItemGroup>

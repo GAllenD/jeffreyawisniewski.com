@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Net.Mail;
 using System.Web.Mvc;
+using Jeff.Model.Domain;
 using Jeff.Model.View;
 using JeffWeb.Models.Services;
 
 namespace JeffWeb.Controllers
 {
-    public class ContactController : Controller
+    public class ContactController : ConfigurableController
     {
         private Emailer _emailer;
         private const string SUCCESS_MESSAGE = "Email successful!  I look forward to hearing from you.";
@@ -15,6 +16,11 @@ namespace JeffWeb.Controllers
         public ContactController()
         {
             _emailer = new Emailer();
+        }
+
+        public override PageType Page()
+        {
+            return PageType.Contact;
         }
 
         public ActionResult Index()
