@@ -4,3 +4,6 @@ JeffWeb/JeffWeb/bin/JeffWeb.dll
 JeffWeb/JeffWeb/obj/Debug/*
 *.pdb
 JeffWeb/JeffWeb/obj/Debug/*
+JeffWeb/Jeff.Data/bin/Debug/*
+JeffWeb/Jeff.Data.Test/obj/*
+JeffWeb/Jeff.Data.Test/bin/Debug/*

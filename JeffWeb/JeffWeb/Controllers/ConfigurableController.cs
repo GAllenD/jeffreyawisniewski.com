@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using Jeff.Data;
 using Jeff.Model.Domain;
 using JeffWeb.Models.Services;
@@ -15,6 +16,11 @@ namespace JeffWeb.Controllers
         }
 
         public abstract PageType Page();
+
+        public IEnumerable<PageConfiguration> GetCurrentPageConfigurations()
+        {
+            return _repository.GetPageConfigurations(Page());
+        }
     }
 
     

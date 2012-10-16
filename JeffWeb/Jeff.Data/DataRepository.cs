@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Jeff.Model.Domain;
 
 namespace Jeff.Data
 {
@@ -11,9 +12,11 @@ namespace Jeff.Data
             _entities = new DBEntities();
         }
 
-        public List<PageConfiguration> GetPageConfigurations()
+        public List<PageConfiguration> GetPageConfigurations(PageType pageType)
         {
-            return _entities.PageConfigurations.ToList();
+            var page = pageType.ToString();
+
+            return _entities.PageConfigurations.Where(p => p.Page == page).ToList();
         }
     }
 }

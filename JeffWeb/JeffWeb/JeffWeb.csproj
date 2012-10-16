@@ -112,6 +112,7 @@
     <Compile Include="Services\Emailer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\images\contact_or.gif" />
     <Content Include="Content\images\contact_or.png" />
     <Content Include="Content\images\left_banner.jpg" />
@@ -220,9 +221,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

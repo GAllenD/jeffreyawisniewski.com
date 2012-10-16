@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="JeffWebDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+<Schema Namespace="JeffWebDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="JeffWebDBModelStoreContainer">
-    <EntitySet Name="PageConfiguration" EntityType="JeffWebDBModel.Store.PageConfiguration" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="PageConfiguration" EntityType="JeffWebDBModel.Store.PageConfiguration" store:Type="Tables" />
   </EntityContainer>
   <EntityType Name="PageConfiguration">
     <Key>
       <PropertyRef Name="PageConfigurationIdentifier" />
     </Key>
-    <Property Name="PageConfigurationIdentifier" Type="bigint" Nullable="false" />
+    <Property Name="PageConfigurationIdentifier" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Page" Type="nvarchar" Nullable="false" MaxLength="25" />
     <Property Name="Text" Type="ntext" />
     <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
-    <Property Name="MediaName" Type="nvarchar" MaxLength="100" />
-    <Property Name="MediaUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="MediaName" Type="nvarchar" MaxLength="250" />
+    <Property Name="MediaUrl" Type="nvarchar" MaxLength="150" />
   </EntityType>
 </Schema>

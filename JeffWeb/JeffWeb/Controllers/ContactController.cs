@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Mail;
 using System.Web.Mvc;
 using Jeff.Model.Domain;
@@ -25,7 +26,7 @@ namespace JeffWeb.Controllers
 
         public ActionResult Index()
         {
-            return View(new ContactForm());
+            return View(GetEmptyDisplayForm());
         }
 
         public ActionResult Send(ContactForm form)
@@ -48,6 +49,16 @@ namespace JeffWeb.Controllers
 
 
             return View("Index", form);
+        }
+
+        public ContactForm GetEmptyDisplayForm()
+        {
+            var email = GetCurrentPageConfigurations().Single().EmailAddress;
+
+            return new ContactForm
+            {
+                DisplayEmail = email
+            };
         }
     }
 }
