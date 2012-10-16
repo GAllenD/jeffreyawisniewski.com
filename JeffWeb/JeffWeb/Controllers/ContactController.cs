@@ -11,12 +11,14 @@ namespace JeffWeb.Controllers
     public class ContactController : ConfigurableController
     {
         private Emailer _emailer;
+        private string _email;
         private const string SUCCESS_MESSAGE = "Email successful!  I look forward to hearing from you.";
         private const string FAILURE_MESSAGE = "An error has occurred.  Please try again later.";
 
         public ContactController()
         {
             _emailer = new Emailer();
+            _email = GetCurrentPageConfigurations().Single().EmailAddress;
         }
 
         public override PageType Page()
@@ -36,15 +38,19 @@ namespace JeffWeb.Controllers
             {
                 var message = string.Concat("Email From:", form.Name, "(", form.ContactInfo, ")", Environment.NewLine, form.Message);
 
-                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", "gregdzezinski@gmail.com", form.Subject, message);
+                var mailMessage = new MailMessage("info@jeffreyawisniewski.com", _email, form.Subject, message);
 
                 _emailer.Send(mailMessage);
 
-                form = new ContactForm{SendStatusMessage = SUCCESS_MESSAGE};
+                form = GetEmptyDisplayForm();
+                form.SendStatusMessage = SUCCESS_MESSAGE;
+
             }
             catch (Exception e)
             {
-                form = new ContactForm { SendStatusMessage = FAILURE_MESSAGE };
+                form = GetEmptyDisplayForm();
+                form.SendStatusMessage = FAILURE_MESSAGE;
+
             }
 
 
@@ -53,11 +59,11 @@ namespace JeffWeb.Controllers
 
         public ContactForm GetEmptyDisplayForm()
         {
-            var email = GetCurrentPageConfigurations().Single().EmailAddress;
+            
 
             return new ContactForm
             {
-                DisplayEmail = email
+                DisplayEmail = _email
             };
         }
     }
