@@ -9,23 +9,9 @@ namespace JeffWeb.Controllers
 {
     public class BioController : Controller
     {
-        //
-        // GET: /Home/
-
         public ActionResult Index()
         {
-            BioForm form;
-
-            if (Session["bioForm"] == null)
-            {
-                form = new BioForm();
-            }
-            else
-            {
-                form = Session["bioForm"] as BioForm;
-            }
-
-            return View(form);
+            return View();
         }
 
     }
