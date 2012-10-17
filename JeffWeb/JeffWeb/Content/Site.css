@@ -35,4 +35,6 @@ body A:hover{color: #E5E5E5;text-decoration: underline;}
 td.contact_label{ text-align: right;}
 td.contact_field{ width: 300px;text-align: left;}
 
+#Bio_Image{ float: left;padding: 5px;}
+
 .Center{ text-align: center;padding-top: 20px;}

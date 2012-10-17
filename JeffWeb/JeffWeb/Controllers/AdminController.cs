@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Jeff.Model.View;
 
 namespace JeffWeb.Controllers
 {
@@ -10,6 +11,11 @@ namespace JeffWeb.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Save(AdminForm form)
+        {
+            return null;
         }
     }
 }

@@ -5,6 +5,6 @@
 }
 
 <div id="Bio_Container">
-    <img src="@Url.Content("~/Content/images/bio.jpg")"/>
-
+    <img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>
+    @Html.Raw(Model.BioText)
 </div>

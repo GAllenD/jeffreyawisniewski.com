@@ -59,8 +59,6 @@ namespace JeffWeb.Controllers
 
         public ContactForm GetEmptyDisplayForm()
         {
-            
-
             return new ContactForm
             {
                 DisplayEmail = _email

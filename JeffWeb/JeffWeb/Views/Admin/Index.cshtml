@@ -1,4 +1,4 @@
-﻿@model JeffWeb.Models.View.BioForm
+﻿@model Jeff.Model.View.AdminForm
 @{
     Layout = null;
 }
@@ -13,14 +13,18 @@
         @using(Html.BeginForm("Save","Admin"))
         {
             <div>
-                <h2>Admin</h2>
-                <input type="submit" />
-                <table>
-                    <tr>
-                        <td>Bio Text</td>
-                        <td>@Html.TextAreaFor(m => m.BioText,new{rows = "100", cols="100"})</td>
-                    </tr>
-                </table>
+                <h2>JeffreyAWisniewski.com | Admin Controls</h2>
+                
+                <Fieldset id="Admin_Email">
+                    <legend>Email Address</legend>
+                    @Html.TextBoxFor(m => m.EmailAddress)
+                </Fieldset>
+                <Fieldset id="Bio_Text">
+                    <legend>Bio Text</legend>
+                    @Html.TextAreaFor(m => m.BioText, new{cols = 120, rows=50})
+                </Fieldset>
+                
+                <input type="submit" value="Save" />
             </div>
         }
     </body>
