@@ -1,4 +1,4 @@
-﻿body{ background-color: #404040 ; color: #E5E5E5}
+﻿body{ background-color: #404040 ;color: #E5E5E5; font-family: Georgia}
 
 body A:link {color: #E5E5E5;text-decoration: none;}
 body A:visited{color: #E5E5E5;text-decoration: none;}
@@ -7,12 +7,12 @@ body A:hover{color: #E5E5E5;text-decoration: underline;}
 
 #Main_Container{ width: 988px;margin-left: auto; margin-right: auto}
 
-#Header_Container{border-bottom: #000000 solid 2px;}
-#Header_Container #Logo{ width: 200px;}
-#Header_Container #Navigation{text-align: right;}
+header{border-bottom: #000000 solid 2px;}
+header #Logo{ width: 200px;}
+header #Navigation{text-align: right;}
 
 #Content_Container{}
-#Footer_Container{ text-align: center;font-size: 8pt;border-top: #000000 solid 2px;padding-top: 10px;clear: both;}
+footer{ text-align: center;font-size: 8pt;border-top: #000000 solid 2px;padding-top: 10px;clear: both;}
 
 #Contact_Content{}
 #Contact_Content address{ font-size: 20pt;text-align: center;padding-top: 20px;padding-bottom: 20px;}
@@ -35,6 +35,8 @@ body A:hover{color: #E5E5E5;text-decoration: underline;}
 td.contact_label{ text-align: right;}
 td.contact_field{ width: 300px;text-align: left;}
 
+#Bio_Container{line-height:150%}
+#Bio_Container article{ padding: 10px;}
 #Bio_Image{ float: left;padding: 5px;}
 
 .Center{ text-align: center;padding-top: 20px;}

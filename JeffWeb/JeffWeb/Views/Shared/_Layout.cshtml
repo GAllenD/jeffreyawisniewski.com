@@ -11,7 +11,7 @@
 
     <body>
         <div id="Main_Container">
-            <div id="Header_Container">
+            <header id="Header_Container">
                 <div id="Logo">
                     <img src="@Url.Content("~/Content/images/logo.gif")"/>
                 </div>
@@ -24,13 +24,13 @@
                     press 
                     @Html.ActionLink("contact","Index","Contact")
                 </nav>
-            </div>
+            </header>
             <div id="Content_Container">
                 @RenderBody()       
             </div>
-            <div id="Footer_Container">
+            <footer id="Footer_Container">
                 © 2012, Jeffrey A. Wisniewski.  Redistribution or use of works without permission is strictly prohibited.
-            </div>
+            </footer>
         </div>
     </body>
 </html>
