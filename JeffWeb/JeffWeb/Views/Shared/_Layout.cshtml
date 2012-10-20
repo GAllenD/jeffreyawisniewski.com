@@ -20,8 +20,8 @@
                     <a href="@Url.Content("~/Content/JeffreyAWisniewski_Resume.pdf")" target="_blank">resume</a>
                     gallery
                     film
-                    voice
-                    press 
+                    @Html.ActionLink("voice","Index","Voice")
+                    @Html.ActionLink("press","Index","Press") 
                     @Html.ActionLink("contact","Index","Contact")
                 </nav>
             </header>

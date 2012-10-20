@@ -105,6 +105,8 @@
     <Compile Include="Controllers\BioController.cs" />
     <Compile Include="Controllers\ConfigurableController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\PressController.cs" />
+    <Compile Include="Controllers\VoiceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -113,8 +115,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\JeffWebDB.sdf" />
+    <Content Include="App_Data\Media\DeFacto.mp3" />
+    <Content Include="App_Data\Media\EDMC Online Course Lecture.mp3" />
+    <Content Include="App_Data\Media\RadioSpot_IFPDA.mp3" />
+    <Content Include="Content\images\audio_bg.jpg" />
     <Content Include="Content\images\bio.jpg" />
     <Content Include="Content\images\contact_or.png" />
+    <Content Include="Content\images\film_bg.jpg" />
     <Content Include="Content\images\left_banner.jpg" />
     <Content Include="Content\images\logo.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -207,6 +214,8 @@
     <Content Include="Views\Bio\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Voice\Index.cshtml" />
+    <Content Include="Views\Press\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jeff.Data\Jeff.Data.csproj">
