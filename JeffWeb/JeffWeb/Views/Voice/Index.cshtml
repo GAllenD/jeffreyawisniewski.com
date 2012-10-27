@@ -5,9 +5,18 @@
 }
 
 <div id="content_audio">
-    @foreach(var item in Model.Items)
-    {
-        @Html.Raw(item.Value)
-    }
+    <table>
+        @foreach(var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Key</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="audio"><audio src="@Url.Content("~/Content/Media/" + @item.Value)" controls></audio></div>
+                </td>
+            </tr>
+        }
+    </table>
 
 </div>
