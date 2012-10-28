@@ -18,7 +18,12 @@ namespace JeffWeb.Controllers
 
         public abstract PageType Page();
 
-        public IEnumerable<PageConfiguration> GetCurrentPageConfigurations()
+        protected void Save(IEnumerable<PageConfiguration> pageConfigurations)
+        {
+            _repository.Save(pageConfigurations);
+        }
+
+        public IEnumerable<PageConfiguration> GetCurrentPageConfigurations(bool allPages = false)
         {
             IEnumerable<PageConfiguration> pageData = null;
 
@@ -34,7 +39,7 @@ namespace JeffWeb.Controllers
             }
 
 
-            return pageData.ToList().Where(p => p.Page == Page().ToString());
+            return allPages ? pageData.ToList() : pageData.ToList().Where(p => p.Page == Page().ToString());
         }
         
     }

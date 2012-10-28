@@ -15,14 +15,22 @@
             <div>
                 <h2>JeffreyAWisniewski.com | Admin Controls</h2>
                 
-                <Fieldset id="Admin_Email">
+                <fieldset id="Admin_Email">
                     <legend>Email Address</legend>
-                    @Html.TextBoxFor(m => m.EmailAddress)
-                </Fieldset>
-                <Fieldset id="Bio_Text">
+                    @Html.TextBoxFor(m => m.EmailAddress, new{size = 50})
+                </fieldset>
+                <fieldset id="Bio_Text">
                     <legend>Bio Text</legend>
-                    @Html.TextAreaFor(m => m.BioText, new{cols = 120, rows=50})
-                </Fieldset>
+                    @Html.TextAreaFor(m => m.BioText, new{cols = 120, rows=30})
+                </fieldset>
+                <fieldset id="Voice">
+                    <legend>Voice Entries</legend>
+                    @foreach(var entry in Model.VoiceEntries)
+                    {
+                        <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new{size = 75}) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new{size = 55})
+                        <br/>
+                    }
+                </fieldset>
                 
                 <input type="submit" value="Save" />
             </div>
