@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Jeff.Data;
 using Jeff.Model.Domain;
-using JeffWeb.Models.Services;
 
 namespace JeffWeb.Controllers
 {
@@ -19,8 +20,23 @@ namespace JeffWeb.Controllers
 
         public IEnumerable<PageConfiguration> GetCurrentPageConfigurations()
         {
-            return _repository.GetPageConfigurations(Page());
+            IEnumerable<PageConfiguration> pageData = null;
+
+            if (System.Web.HttpContext.Current.Cache["PageData"] == null)
+            {
+                pageData = _repository.GetPageConfigurations();
+
+                System.Web.HttpContext.Current.Cache.Insert("PageData", pageData);    
+            }
+            else
+            {
+                pageData = (IEnumerable<PageConfiguration>)System.Web.HttpContext.Current.Cache["PageData"];
+            }
+
+
+            return pageData.ToList().Where(p => p.Page == Page().ToString());
         }
+        
     }
 
     

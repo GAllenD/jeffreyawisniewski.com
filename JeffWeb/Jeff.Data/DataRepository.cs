@@ -12,6 +12,11 @@ namespace Jeff.Data
             _entities = new DBEntities();
         }
 
+        public List<PageConfiguration> GetPageConfigurations()
+        {
+            return _entities.PageConfigurations.ToList();
+        }
+
         public List<PageConfiguration> GetPageConfigurations(PageType pageType)
         {
             var page = pageType.ToString();
