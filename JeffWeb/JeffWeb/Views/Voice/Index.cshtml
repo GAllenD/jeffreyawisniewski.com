@@ -6,14 +6,20 @@
 
 <div id="content_audio">
     <table>
-        @foreach(var item in Model.Items)
+        @foreach (var item in Model.Items)
         {
             <tr>
                 <td>@item.Key</td>
             </tr>
             <tr>
                 <td>
-                    <div class="audio"><audio src="@Url.Content("~/Content/Media/" + @item.Value)" controls></audio></div>
+                    <div class="audio">
+                        <audio  controls>
+                            <source src="@Url.Content("~/Content/Media/" + @item.Value + ".ogg")" type="audio/ogg">
+                            <source src="@Url.Content("~/Content/Media/" + @item.Value + ".mp3")" type="audio/mpeg">
+                            This browser does not support audio playback.
+                        </audio>
+                    </div>
                 </td>
             </tr>
         }

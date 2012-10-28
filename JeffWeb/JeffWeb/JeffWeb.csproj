@@ -182,6 +182,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\JeffreyAWisniewski_Resume.pdf" />
+    <Content Include="Content\Media\DeFacto.ogg" />
+    <Content Include="Content\Media\EDMC Online Course Lecture.ogg" />
+    <Content Include="Content\Media\RadioSpot_IFPDA.ogg" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
