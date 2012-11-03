@@ -16,6 +16,29 @@ namespace Jeff.Data
         {
             using (_entities = new DBEntities())
             {
+                foreach (var pageConfiguration in pageConfigurations)
+                {
+                    var entry = _entities.PageConfigurations.FirstOrDefault(p => p.PageConfigurationIdentifier == pageConfiguration.PageConfigurationIdentifier);
+
+                    // new entry
+                    if (entry == null)
+                    {
+                        _entities.PageConfigurations.Add(pageConfiguration);
+                        continue;
+                    }
+
+                    entry = pageConfiguration;
+
+
+                    // remove old entries
+                    //var entriesToDelete = from e in _entities select e where e != null
+
+                    //foreach (var deleteEntry in entriesToDelete)
+                    //{
+                    //    _entities.PageConfigurations.Remove(deleteEntry);
+                    //}
+                }
+
                 _entities.SaveChanges();
             }
         }

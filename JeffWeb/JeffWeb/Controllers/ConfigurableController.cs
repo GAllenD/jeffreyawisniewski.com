@@ -9,6 +9,7 @@ namespace JeffWeb.Controllers
 {
     public abstract class ConfigurableController : Controller
     {
+        private const string CACHE_NAME = "PageData";
         private DataRepository _repository;
 
         protected ConfigurableController()
@@ -18,28 +19,30 @@ namespace JeffWeb.Controllers
 
         public abstract PageType Page();
 
-        protected void Save(IEnumerable<PageConfiguration> pageConfigurations)
+        protected void SaveConfigurations(IEnumerable<PageConfiguration> pageConfigurations)
         {
             _repository.Save(pageConfigurations);
+
+            System.Web.HttpContext.Current.Cache.Remove(CACHE_NAME);
         }
 
-        public IEnumerable<PageConfiguration> GetCurrentPageConfigurations(bool allPages = false)
+        public List<PageConfiguration> GetCurrentPageConfigurations(bool allPages = false)
         {
             IEnumerable<PageConfiguration> pageData = null;
 
-            if (System.Web.HttpContext.Current.Cache["PageData"] == null)
+            if (System.Web.HttpContext.Current.Cache[CACHE_NAME] == null)
             {
                 pageData = _repository.GetPageConfigurations();
 
-                System.Web.HttpContext.Current.Cache.Insert("PageData", pageData);    
+                System.Web.HttpContext.Current.Cache.Insert(CACHE_NAME, pageData);    
             }
             else
             {
-                pageData = (IEnumerable<PageConfiguration>)System.Web.HttpContext.Current.Cache["PageData"];
+                pageData = (IEnumerable<PageConfiguration>)System.Web.HttpContext.Current.Cache[CACHE_NAME];
             }
 
 
-            return allPages ? pageData.ToList() : pageData.ToList().Where(p => p.Page == Page().ToString());
+            return allPages ? pageData.ToList() : pageData.ToList().Where(p => p.Page == Page().ToString()).ToList();
         }
         
     }
