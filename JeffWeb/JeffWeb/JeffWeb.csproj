@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\JeffWebDB.sdf" />
+    <Content Include="Content\Admin.css" />
     <Content Include="Content\Media\DeFacto.mp3" />
     <Content Include="Content\Media\EDMC Online Course Lecture.mp3" />
     <Content Include="Content\Media\RadioSpot_IFPDA.mp3" />

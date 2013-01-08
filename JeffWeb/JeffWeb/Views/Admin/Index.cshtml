@@ -8,32 +8,29 @@
 <html>
 <head>
     <title>Jeffrey A. Wisniewski | Admin</title>
+    <link href="@Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
 </head>
-    <body>
-        @using(Html.BeginForm("Save","Admin"))
-        {
-            <div>
-                <h2>JeffreyAWisniewski.com | Admin Controls</h2>
-                
-                <fieldset id="Admin_Email">
-                    <legend>Email Address</legend>
-                    @Html.TextBoxFor(m => m.EmailAddress, new{size = 50})
-                </fieldset>
-                <fieldset id="Bio_Text">
-                    <legend>Bio Text</legend>
-                    @Html.TextAreaFor(m => m.BioText, new{cols = 120, rows=30})
-                </fieldset>
-                <fieldset id="Voice">
-                    <legend>Voice Entries</legend>
-                    @foreach(var entry in Model.VoiceEntries)
-                    {
-                        <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new{size = 75}) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new{size = 55})
-                        <br/>
-                    }
-                </fieldset>
-                
-                <input type="submit" value="Save" />
-            </div>
-        }
-    </body>
+<body id="Admin_Body">
+    @using (Html.BeginForm("Save", "Admin"))
+    {
+        <div>
+            <h3>Email Address</h3>
+            @Html.TextBoxFor(m => m.EmailAddress, new { size = 50 })
+        </div>
+        <div>
+            <h3>Bio Text</h3>
+            @Html.TextAreaFor(m => m.BioText, new { cols = 120, rows = 30 })
+        </div>
+        <div>
+            <h3>Voice Entries</h3>
+            @foreach (var entry in Model.VoiceEntries)
+            {
+                <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new { size = 75 }) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new { size = 55 })
+                <br />
+            }
+        </div>
+        <hr />
+        <input type="submit" value="Save" />
+    }
+</body>
 </html>

@@ -20,15 +20,18 @@ namespace Jeff.Data
                 {
                     var entry = _entities.PageConfigurations.FirstOrDefault(p => p.PageConfigurationIdentifier == pageConfiguration.PageConfigurationIdentifier);
 
-                    // new entry
                     if (entry == null)
                     {
                         _entities.PageConfigurations.Add(pageConfiguration);
                         continue;
                     }
 
-                    entry = pageConfiguration;
-
+                    entry.PageConfigurationIdentifier = pageConfiguration.PageConfigurationIdentifier;
+                    entry.EmailAddress = pageConfiguration.EmailAddress;
+                    entry.MediaName = pageConfiguration.MediaName;
+                    entry.MediaUrl = pageConfiguration.MediaUrl;
+                    entry.Page = pageConfiguration.Page;
+                    entry.Text = pageConfiguration.Text;
 
                     // remove old entries
                     //var entriesToDelete = from e in _entities select e where e != null
