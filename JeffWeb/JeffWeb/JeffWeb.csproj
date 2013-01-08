@@ -105,6 +105,7 @@
     <Compile Include="Controllers\BioController.cs" />
     <Compile Include="Controllers\ConfigurableController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\PressController.cs" />
     <Compile Include="Controllers\VoiceController.cs" />
     <Compile Include="Global.asax.cs">
@@ -114,6 +115,10 @@
     <Compile Include="Services\Emailer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Content\Gallery\1.jpg" />
+    <Content Include="App_Data\Content\Gallery\2.jpg" />
+    <Content Include="App_Data\Content\Gallery\3.jpg" />
+    <Content Include="App_Data\Content\Gallery\4.jpg" />
     <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\Admin.css" />
     <Content Include="Content\Media\DeFacto.mp3" />
@@ -221,6 +226,7 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Voice\Index.cshtml" />
     <Content Include="Views\Press\Index.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jeff.Data\Jeff.Data.csproj">

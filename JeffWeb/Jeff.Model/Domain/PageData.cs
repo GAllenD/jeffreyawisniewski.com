@@ -20,6 +20,7 @@ namespace Jeff.Model.Domain
         Home,
         Bio,
         Video,
+        Galley,
         Voice,
         Press,
         Contact

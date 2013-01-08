@@ -45,6 +45,7 @@
     <Compile Include="View\AdminForm.cs" />
     <Compile Include="View\BioForm.cs" />
     <Compile Include="View\ContactForm.cs" />
+    <Compile Include="View\GalleryForm.cs" />
     <Compile Include="View\VoiceForm.cs" />
   </ItemGroup>
   <ItemGroup />
