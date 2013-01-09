@@ -115,10 +115,10 @@
     <Compile Include="Services\Emailer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Content\Gallery\1.jpg" />
-    <Content Include="App_Data\Content\Gallery\2.jpg" />
-    <Content Include="App_Data\Content\Gallery\3.jpg" />
-    <Content Include="App_Data\Content\Gallery\4.jpg" />
+    <Content Include="Content\images\Gallery\1.jpg" />
+    <Content Include="Content\images\Gallery\2.jpg" />
+    <Content Include="Content\images\Gallery\3.jpg" />
+    <Content Include="Content\images\Gallery\4.jpg" />
     <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\Admin.css" />
     <Content Include="Content\Media\DeFacto.mp3" />
