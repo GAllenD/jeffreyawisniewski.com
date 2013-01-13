@@ -46,7 +46,7 @@ namespace JeffWeb.Controllers
                 form.SendStatusMessage = SUCCESS_MESSAGE;
 
             }
-            catch (Exception e)
+            catch
             {
                 form = GetEmptyDisplayForm();
                 form.SendStatusMessage = FAILURE_MESSAGE;

@@ -7,12 +7,12 @@ body A:hover{color: #E5E5E5;text-decoration: underline;}
 
 #Main_Container{ width: 820px;margin-left: auto; margin-right: auto}
 
-header{border-bottom: #000000 solid 2px;}
+header{border-bottom: #878787 solid 2px;}
 header #Logo{ width: 200px;}
 header #Navigation{text-align: right;}
 
 #Content_Container{}
-footer{ text-align: center;font-size: 8pt;border-top: #000000 solid 2px;padding-top: 10px;clear: both;}
+footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-top: 10px;clear: both;}
 
 #Contact_Content{}
 #Contact_Content address{ font-size: 20pt;text-align: center;padding-top: 20px;padding-bottom: 20px;}

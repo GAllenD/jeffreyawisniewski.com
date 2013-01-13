@@ -16,3 +16,7 @@ JeffWeb/Jeff.Data/obj/Debug/*
 JeffWeb/JeffWeb/bin/Jeff.Data.dll
 JeffWeb/Jeff.Model/obj/Debug/J*
 JeffWeb/Jeff.Model/bin/Debug/*
+JeffWeb/Jeff.Data.Test/bin/Release/
+JeffWeb/Jeff.Data/bin/Release/
+JeffWeb/Jeff.Model/obj/Release/
+JeffWeb/Jeff.Model/bin/Release/
