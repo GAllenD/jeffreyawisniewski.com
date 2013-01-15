@@ -1,0 +1,13 @@
+﻿@model Jeff.Model.View.ItemListForm
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @foreach (var item in Model.Items)
+    {
+        <h2>@item.Key</h2>
+        <iframe src="http://player.vimeo.com/video/@item.Value" style="width: 800PX; height: 414PX;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    }
+</div>
