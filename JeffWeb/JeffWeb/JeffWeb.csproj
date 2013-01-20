@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Emailer.cs" />
+    <Compile Include="Services\PhotoReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\Gallery\1.jpg" />
@@ -93,9 +94,15 @@
     <Content Include="Content\images\Gallery\4.jpg" />
     <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\Admin.css" />
-    <Content Include="Content\Media\DeFacto.mp3" />
-    <Content Include="Content\Media\EDMC Online Course Lecture.mp3" />
-    <Content Include="Content\Media\RadioSpot_IFPDA.mp3" />
+    <Content Include="Content\images\lightbox-blank.gif" />
+    <Content Include="Content\images\lightbox-btn-close.gif" />
+    <Content Include="Content\images\lightbox-btn-next.gif" />
+    <Content Include="Content\images\lightbox-btn-prev.gif" />
+    <Content Include="Content\images\lightbox-ico-loading.gif" />
+    <Content Include="Content\jquery.lightbox-0.5.css" />
+    <Content Include="Content\Media\Voice\DeFacto.mp3" />
+    <Content Include="Content\Media\Voice\EDMC Online Course Lecture.mp3" />
+    <Content Include="Content\Media\Voice\RadioSpot_IFPDA.mp3" />
     <Content Include="Content\images\audio_bg.jpg" />
     <Content Include="Content\images\audio_bg_wide.jpg" />
     <Content Include="Content\images\bio.jpg" />
@@ -105,10 +112,10 @@
     <Content Include="Content\images\logo.gif" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\JeffreyAWisniewski_Resume.pdf" />
-    <Content Include="Content\Media\DeFacto.ogg" />
-    <Content Include="Content\Media\EDMC Online Course Lecture.ogg" />
-    <Content Include="Content\Media\RadioSpot_IFPDA.ogg" />
+    <Content Include="Content\Media\JeffreyAWisniewski_Resume.pdf" />
+    <Content Include="Content\Media\Voice\DeFacto.ogg" />
+    <Content Include="Content\Media\Voice\EDMC Online Course Lecture.ogg" />
+    <Content Include="Content\Media\Voice\RadioSpot_IFPDA.ogg" />
     <None Include="Properties\PublishProfiles\Arvixe.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -116,15 +123,19 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.lightbox-0.5.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -162,6 +173,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Media\Photos\" />
     <Folder Include="Content\Scripts\" />
   </ItemGroup>
   <PropertyGroup>
