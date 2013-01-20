@@ -46,7 +46,7 @@
     <Compile Include="View\BioForm.cs" />
     <Compile Include="View\ContactForm.cs" />
     <Compile Include="View\GalleryForm.cs" />
-    <Compile Include="View\VoiceForm.cs" />
+    <Compile Include="View\ItemListForm.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

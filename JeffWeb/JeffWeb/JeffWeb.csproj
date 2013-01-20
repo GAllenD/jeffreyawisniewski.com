@@ -78,6 +78,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\PressController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Controllers\VoiceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,6 +146,7 @@
     <Content Include="Views\Voice\Index.cshtml" />
     <Content Include="Views\Press\Index.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jeff.Data\Jeff.Data.csproj">

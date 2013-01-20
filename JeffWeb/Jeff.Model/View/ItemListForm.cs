@@ -2,9 +2,9 @@
 
 namespace Jeff.Model.View
 {
-    public class VoiceForm
+    public class ItemListForm
     {
-        public VoiceForm()
+        public ItemListForm()
         {
             Items = new Dictionary<string, string>();
         }

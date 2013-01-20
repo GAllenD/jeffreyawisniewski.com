@@ -9,7 +9,7 @@ using Jeff.Model.View;
 
 namespace JeffWeb.Controllers
 {
-    public class VoiceController : ConfigurableController
+    public class VideoController : ConfigurableController
     {
         public ActionResult Index()
         {
@@ -17,7 +17,7 @@ namespace JeffWeb.Controllers
 
             foreach (var config in _pageConfigurations)
             {
-                form.Items.Add(config.MediaName,config.MediaUrl);
+                form.Items.Add(config.MediaName, config.MediaUrl);
             }
 
             return View(form);
@@ -25,8 +25,7 @@ namespace JeffWeb.Controllers
 
         public override PageType Page()
         {
-            return PageType.Voice;
+            return PageType.Video;
         }
-        
     }
 }

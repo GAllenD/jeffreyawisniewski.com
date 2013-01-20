@@ -41,7 +41,8 @@ namespace JeffWeb.Controllers
             {
                 EmailAddress = _pageConfiguration.First(p => p.Page == PageType.Contact.ToString()).EmailAddress,
                 BioText = _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text,
-                VoiceEntries = _pageConfiguration.Where(p => p.Page == PageType.Voice.ToString()).ToDictionary(p => p.MediaName, p => p.MediaUrl)
+                VoiceEntries = _pageConfiguration.Where(p => p.Page == PageType.Voice.ToString()).ToDictionary(p => p.MediaName, p => p.MediaUrl),
+                VideoEntries = _pageConfiguration.Where(p => p.Page == PageType.Video.ToString()).ToDictionary(p => p.MediaName, p => p.MediaUrl)
             };
         }
 
@@ -52,7 +53,7 @@ namespace JeffWeb.Controllers
             _pageConfiguration.First(p => p.Page == PageType.Contact.ToString()).EmailAddress = form.EmailAddress;
             _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text = form.BioText;
 
-            foreach (var entry in form.VoiceEntries)
+            foreach (var entry in form.ItemEntries)
             {
                 var value = _pageConfiguration.FirstOrDefault(p => p.Page == PageType.Voice.ToString() && p.MediaName == entry.Key);
                 

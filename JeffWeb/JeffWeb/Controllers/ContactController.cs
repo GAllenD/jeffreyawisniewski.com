@@ -18,7 +18,7 @@ namespace JeffWeb.Controllers
         public ContactController()
         {
             _emailer = new Emailer();
-            _email = GetCurrentPageConfigurations().Single().EmailAddress;
+            _email = _pageConfigurations.Single().EmailAddress;
         }
 
         public override PageType Page()

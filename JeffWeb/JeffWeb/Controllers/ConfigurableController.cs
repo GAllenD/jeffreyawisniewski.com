@@ -11,10 +11,14 @@ namespace JeffWeb.Controllers
     {
         private const string CACHE_NAME = "PageData";
         private DataRepository _repository;
+        protected List<PageConfiguration> _pageConfigurations;
 
         protected ConfigurableController()
         {
             _repository = new DataRepository();
+
+            _pageConfigurations = GetCurrentPageConfigurations().ToList();
+
         }
 
         public abstract PageType Page();
