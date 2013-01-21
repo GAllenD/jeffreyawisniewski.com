@@ -1,18 +1,41 @@
-﻿@{
+﻿@model List<Jeff.Model.Domain.Gallery>
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var rowCounter = 1;
 }
 
 <div id="Gallery_Container">
-    <table id="Gallery_tbl" style="border-collapse: collapse;">
-        <tr>
-            <td>
-                <img src="@Url.Content("~/Content/images/Gallery/1.jpg")"/>
-            </td>
-            <td>
-                <img src="@Url.Content("~/Content/images/Gallery/2.jpg")"/>
-                <img src="@Url.Content("~/Content/images/Gallery/3.jpg")"/>
-                <img src="@Url.Content("~/Content/images/Gallery/4.jpg")"/>
-            </td>
-        </tr>
-    </table>
+    
+    @foreach (var gallery in Model)
+    {
+        <h2>@gallery.Name</h2>
+        
+        <table>
+            <tbody>
+                @{ rowCounter = 1;}
+                @foreach (var photo in gallery.FileNames)
+                {
+                    var modVal = rowCounter % 4;
+                    if (modVal == 1)
+                    {
+                        @:<tr>
+                    }
+                    <td>
+                        <img class="gallery_thumb" src="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/Thumbs/" + photo)" />
+                    </td>
+                    
+                    if (modVal == 0)
+                    {
+                        @:</tr> 
+                
+                    }
+                    rowCounter++;
+                }    
+
+            </tbody>
+        </table>
+    }
+
+    
 </div>

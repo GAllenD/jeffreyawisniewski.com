@@ -45,4 +45,6 @@ td.contact_field{ width: 300px;text-align: left;}
 
 #Gallery_tbl img{ border-collapse: collapse;border: 0;margin: 0;padding: 0;display: block;float: left;}
 
+.gallery_thumb{ width: 200px;height: 150px;}
+
 .Center{ text-align: center;padding-top: 20px;}

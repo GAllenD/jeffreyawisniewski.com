@@ -158,6 +158,7 @@
     <Content Include="Views\Press\Index.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Gallery\Copy of Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jeff.Data\Jeff.Data.csproj">

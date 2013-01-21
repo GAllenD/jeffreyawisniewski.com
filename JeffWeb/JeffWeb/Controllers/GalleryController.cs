@@ -5,12 +5,19 @@ using System.Web;
 using System.Web.Mvc;
 using Jeff.Data;
 using Jeff.Model.Domain;
+using JeffWeb.Services;
 
 namespace JeffWeb.Controllers
 {
     public class GalleryController : ConfigurableController
     {
         private List<PageConfiguration> _pageConfigurations;
+        private PhotoReader _photoReader;
+
+        public GalleryController()
+        {
+            _photoReader = new PhotoReader();
+        }
 
         public override PageType Page()
         {
@@ -19,7 +26,7 @@ namespace JeffWeb.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(_photoReader.GetGalleries());
         }
     }
 }
