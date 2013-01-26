@@ -1,6 +1,6 @@
 ﻿namespace Jeff.Model.View
 {
-    public class ContactForm
+    public class ContactView
     {
         public string DisplayEmail { get; set; }
 

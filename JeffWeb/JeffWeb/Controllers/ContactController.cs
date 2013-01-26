@@ -31,7 +31,7 @@ namespace JeffWeb.Controllers
             return View(GetEmptyDisplayForm());
         }
 
-        public ActionResult Send(ContactForm form)
+        public ActionResult Send(ContactView form)
         {
 
             try
@@ -57,9 +57,9 @@ namespace JeffWeb.Controllers
             return View("Index", form);
         }
 
-        public ContactForm GetEmptyDisplayForm()
+        public ContactView GetEmptyDisplayForm()
         {
-            return new ContactForm
+            return new ContactView
             {
                 DisplayEmail = _email
             };

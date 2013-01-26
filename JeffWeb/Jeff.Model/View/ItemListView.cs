@@ -2,9 +2,9 @@
 
 namespace Jeff.Model.View
 {
-    public class ItemListForm
+    public class ItemListView
     {
-        public ItemListForm()
+        public ItemListView()
         {
             Items = new Dictionary<string, string>();
         }

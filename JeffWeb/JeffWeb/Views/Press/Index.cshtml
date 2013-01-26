@@ -1,6 +1,13 @@
-﻿@{
+﻿@model Jeff.Model.View.PressView
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div>
+    @foreach(var show in Model.Shows)
+    {
+        @show.Title
+    }
+</div>

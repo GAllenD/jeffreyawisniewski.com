@@ -9,8 +9,6 @@ namespace JeffWeb.Controllers
 {
     public class PressController : ConfigurableController
     {
-        //
-        // GET: /Press/
 
         public ActionResult Index()
         {

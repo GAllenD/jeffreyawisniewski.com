@@ -13,7 +13,7 @@ namespace JeffWeb.Controllers
     {
         public ActionResult Index()
         {
-            var form = new ItemListForm();
+            var form = new ItemListView();
 
             foreach (var config in _pageConfigurations)
             {

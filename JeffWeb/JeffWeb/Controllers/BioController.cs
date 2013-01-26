@@ -10,7 +10,7 @@ namespace JeffWeb.Controllers
     {
         public ActionResult Index()
         {
-            var viewModel = new BioForm
+            var viewModel = new BioView
             {
                 BioText = _pageConfigurations.Single().Text
             };

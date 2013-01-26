@@ -43,10 +43,11 @@
     <Compile Include="Domain\Gallery.cs" />
     <Compile Include="Domain\PageData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AdminForm.cs" />
-    <Compile Include="View\BioForm.cs" />
-    <Compile Include="View\ContactForm.cs" />
-    <Compile Include="View\ItemListForm.cs" />
+    <Compile Include="View\AdminView.cs" />
+    <Compile Include="View\BioView.cs" />
+    <Compile Include="View\ContactView.cs" />
+    <Compile Include="View\ItemListView.cs" />
+    <Compile Include="View\PressView.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

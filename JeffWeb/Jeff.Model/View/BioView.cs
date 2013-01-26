@@ -1,6 +1,6 @@
 ﻿namespace Jeff.Model.View
 {
-    public class BioForm
+    public class BioView
     {
         public string BioText { get; set; }
     }

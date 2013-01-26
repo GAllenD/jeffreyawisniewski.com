@@ -26,7 +26,7 @@ namespace JeffWeb.Controllers
         }
 
         [ValidateInput(false)]
-        public ActionResult Save(AdminForm form)
+        public ActionResult Save(AdminView form)
         {
             MapToPageConfiguration(form);
 
@@ -35,9 +35,9 @@ namespace JeffWeb.Controllers
             return Index(true);
         }
 
-        private AdminForm MapToForm()
+        private AdminView MapToForm()
         {
-            return new AdminForm
+            return new AdminView
             {
                 EmailAddress = _pageConfiguration.First(p => p.Page == PageType.Contact.ToString()).EmailAddress,
                 BioText = _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text,
@@ -46,7 +46,7 @@ namespace JeffWeb.Controllers
             };
         }
 
-        private void MapToPageConfiguration(AdminForm form)
+        private void MapToPageConfiguration(AdminView form)
         {
             _pageConfiguration = GetCurrentPageConfigurations(true);
 

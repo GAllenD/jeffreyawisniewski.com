@@ -2,9 +2,9 @@
 
 namespace Jeff.Model.View
 {
-    public class AdminForm
+    public class AdminView
     {
-        public AdminForm()
+        public AdminView()
         {
             VoiceEntries = new Dictionary<string, string>();
             VideoEntries = new Dictionary<string, string>();
