@@ -20,5 +20,7 @@ namespace Jeff.Data
         public string EmailAddress { get; set; }
         public string MediaName { get; set; }
         public string MediaUrl { get; set; }
+        public string Title { get; set; }
+        public string Credit { get; set; }
     }
 }

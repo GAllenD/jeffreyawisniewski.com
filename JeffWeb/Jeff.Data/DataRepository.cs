@@ -32,6 +32,8 @@ namespace Jeff.Data
                     entry.MediaUrl = pageConfiguration.MediaUrl;
                     entry.Page = pageConfiguration.Page;
                     entry.Text = pageConfiguration.Text;
+                    entry.Title = pageConfiguration.Title;
+                    entry.Credit = pageConfiguration.Credit;
 
                     // remove old entries
                     //var entriesToDelete = from e in _entities select e where e != null

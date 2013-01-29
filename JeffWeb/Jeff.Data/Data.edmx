@@ -18,6 +18,8 @@
           <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="MediaName" Type="nvarchar" MaxLength="250" />
           <Property Name="MediaUrl" Type="nvarchar" MaxLength="150" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Credit" Type="nvarchar" MaxLength="100" />
         </EntityType>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -36,6 +38,8 @@
           <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="MediaName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="MediaUrl" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Title" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Credit" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -46,6 +50,8 @@
           <EntitySetMapping Name="PageConfigurations">
             <EntityTypeMapping TypeName="JeffWebDBModel.PageConfiguration">
               <MappingFragment StoreEntitySet="PageConfiguration">
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="PageConfigurationIdentifier" ColumnName="PageConfigurationIdentifier" />
                 <ScalarProperty Name="Page" ColumnName="Page" />
                 <ScalarProperty Name="Text" ColumnName="Text" />

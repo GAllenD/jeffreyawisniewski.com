@@ -1,13 +1,19 @@
 ﻿@model Jeff.Model.View.PressView
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
-    @foreach(var show in Model.Shows)
+<div style="padding-top: 10px;">
+    @foreach (var show in Model.Shows)
     {
-        @show.Title
+        <div class="reviewGroup">
+            @foreach (var review in show.Reviews)
+            {
+                <br/>
+                <div class="reviewText">@Html.Raw(review.Review)</div>
+                <div class="reviewCredit">@review.Credit for @show.Title</div>
+            }
+        </div>
     }
 </div>

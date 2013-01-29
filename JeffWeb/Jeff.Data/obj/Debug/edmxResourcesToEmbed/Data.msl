@@ -4,6 +4,8 @@
     <EntitySetMapping Name="PageConfigurations">
       <EntityTypeMapping TypeName="JeffWebDBModel.PageConfiguration">
         <MappingFragment StoreEntitySet="PageConfiguration">
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="PageConfigurationIdentifier" ColumnName="PageConfigurationIdentifier" />
           <ScalarProperty Name="Page" ColumnName="Page" />
           <ScalarProperty Name="Text" ColumnName="Text" />
