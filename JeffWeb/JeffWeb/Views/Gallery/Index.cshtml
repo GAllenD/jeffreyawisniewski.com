@@ -22,7 +22,9 @@
                         @:<tr>
                     }
                     <td>
-                        <img class="gallery_thumb" src="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/Thumbs/" + photo)" />
+                        <a href="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/" + photo)" class="lightbox">
+                            <img class="gallery_thumb" src="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/Thumbs/" + photo)" />
+                        </a>
                     </td>
                     
                     if (modVal == 0)
@@ -39,3 +41,9 @@
 
     
 </div>
+
+<script type="text/javascript">
+     $().ready(function () {
+         $('a.lightbox').lightBox({ fixedNavigation: true });
+     });
+</script>

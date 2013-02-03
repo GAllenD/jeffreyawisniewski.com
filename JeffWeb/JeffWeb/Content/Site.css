@@ -19,7 +19,7 @@ footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-
 #Contact_Content #Contact_Or_Break{ text-align: center;}
 #Contact_Content #Contact_Form{text-align: center; padding-left: 50px;padding-right: 50px;padding-bottom: 50px; width: 800px;}
 
-#Contact_Content #Contact_Form table { width: 100%;text-align: center;}
+#Contact_Content #Contact_Form table { width: 50%;text-align: center;}
 #Contact_Content #Contact_Form input[type="submit"]
 { 
     background-color: #E2E2E2;

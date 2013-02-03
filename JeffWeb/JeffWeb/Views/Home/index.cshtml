@@ -1,0 +1,12 @@
+﻿@model Jeff.Model.View.HomeView
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div style="float: left;">
+        <img src="@Url.Content("~/Content/Images/Left_banner.jpg")"/>
+    </div>
+    @Html.Raw(Model.HomeHtml)
+</div>

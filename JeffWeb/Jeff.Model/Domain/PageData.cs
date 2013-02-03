@@ -17,6 +17,7 @@ namespace Jeff.Model.Domain
     public enum PageType
     {
         None,
+        News,
         Home,
         Bio,
         Video,

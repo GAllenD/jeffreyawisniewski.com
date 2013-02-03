@@ -18,14 +18,18 @@
             @Html.TextBoxFor(m => m.EmailAddress, new { size = 50 })
         </div>
         <div>
-            <h3>Bio Text</h3>
+            <h3>Home Page text (supports HomeHtml)</h3>
+            @Html.TextAreaFor(m => m.HomeHtml, new { cols = 120, rows = 30 })
+        </div>
+        <div>
+            <h3>Bio Text (supports html)</h3>
             @Html.TextAreaFor(m => m.BioText, new { cols = 120, rows = 30 })
         </div>
         <div>
             <h3>Videos (Vimeo)</h3>
             @foreach (var entry in Model.VideoEntries)
             {
-  <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new { size = 75 }) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new { size = 55 })
+                <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new { size = 75 }) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new { size = 55 })
                 <br />
             }
         </div>

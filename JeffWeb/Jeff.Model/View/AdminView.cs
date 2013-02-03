@@ -11,6 +11,7 @@ namespace Jeff.Model.View
         }
 
         public string EmailAddress { get; set; }
+        public string HomeHtml { get; set; }
         public string BioText { get; set; }
         public Dictionary<string, string> VoiceEntries { get; set; }
         public Dictionary<string, string> VideoEntries { get; set; }

@@ -46,6 +46,7 @@
     <Compile Include="View\AdminView.cs" />
     <Compile Include="View\BioView.cs" />
     <Compile Include="View\ContactView.cs" />
+    <Compile Include="View\HomeView.cs" />
     <Compile Include="View\ItemListView.cs" />
     <Compile Include="View\PressView.cs" />
   </ItemGroup>

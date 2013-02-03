@@ -40,6 +40,7 @@ namespace JeffWeb.Controllers
             return new AdminView
             {
                 EmailAddress = _pageConfiguration.First(p => p.Page == PageType.Contact.ToString()).EmailAddress,
+                HomeHtml = _pageConfiguration.First(p => p.Page == PageType.Home.ToString()).Text,
                 BioText = _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text,
                 VoiceEntries = _pageConfiguration.Where(p => p.Page == PageType.Voice.ToString()).ToDictionary(p => p.MediaName, p => p.MediaUrl),
                 VideoEntries = _pageConfiguration.Where(p => p.Page == PageType.Video.ToString()).ToDictionary(p => p.MediaName, p => p.MediaUrl)
@@ -52,6 +53,7 @@ namespace JeffWeb.Controllers
 
             _pageConfiguration.First(p => p.Page == PageType.Contact.ToString()).EmailAddress = form.EmailAddress;
             _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text = form.BioText;
+            _pageConfiguration.First(p => p.Page == PageType.Home.ToString()).Text = form.HomeHtml;
 
             foreach (var entry in form.ItemEntries)
             {

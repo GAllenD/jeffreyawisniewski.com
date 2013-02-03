@@ -12,19 +12,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/JeffWebDB.sdf">
-      <publishTime>01/13/2013 12:36:24</publishTime>
+      <publishTime>02/03/2013 10:28:13</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/15/2012 19:32:22</publishTime>
     </File>
     <File Include="bin/Jeff.Data.dll">
-      <publishTime>01/13/2013 12:42:46</publishTime>
+      <publishTime>02/03/2013 10:57:08</publishTime>
     </File>
     <File Include="bin/Jeff.Model.dll">
-      <publishTime>01/13/2013 12:42:42</publishTime>
+      <publishTime>02/03/2013 10:57:07</publishTime>
     </File>
     <File Include="bin/JeffWeb.dll">
-      <publishTime>01/13/2013 13:24:42</publishTime>
+      <publishTime>02/03/2013 10:57:08</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>10/07/2012 13:08:09</publishTime>
@@ -86,11 +86,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/left_banner.jpg">
       <publishTime>04/13/2012 20:43:52</publishTime>
     </File>
+    <File Include="Content/images/lightbox-blank.gif">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/images/lightbox-btn-close.gif">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/images/lightbox-btn-next.gif">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/images/lightbox-btn-prev.gif">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/images/lightbox-ico-loading.gif">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
     <File Include="Content/images/logo.gif">
       <publishTime>10/07/2012 16:05:47</publishTime>
     </File>
     <File Include="Content/JeffreyAWisniewski_Resume.pdf">
       <publishTime>10/08/2012 19:34:48</publishTime>
+    </File>
+    <File Include="Content/jquery.lightbox-0.5.css">
+      <publishTime>01/22/2013 20:47:20</publishTime>
     </File>
     <File Include="Content/Media/DeFacto.mp3">
       <publishTime>11/07/2009 15:24:54</publishTime>
@@ -104,14 +122,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Media/EDMC Online Course Lecture.ogg">
       <publishTime>10/27/2012 23:23:00</publishTime>
     </File>
+    <File Include="Content/Media/JeffreyAWisniewski_Resume.pdf">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
     <File Include="Content/Media/RadioSpot_IFPDA.mp3">
       <publishTime>11/07/2009 13:23:51</publishTime>
     </File>
     <File Include="Content/Media/RadioSpot_IFPDA.ogg">
       <publishTime>10/27/2012 23:23:45</publishTime>
     </File>
+    <File Include="Content/Media/Voice/DeFacto.mp3">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/Media/Voice/DeFacto.ogg">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/Media/Voice/EDMC Online Course Lecture.mp3">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/Media/Voice/EDMC Online Course Lecture.ogg">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/Media/Voice/RadioSpot_IFPDA.mp3">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
+    <File Include="Content/Media/Voice/RadioSpot_IFPDA.ogg">
+      <publishTime>01/22/2013 20:47:20</publishTime>
+    </File>
     <File Include="Content/Site.css">
-      <publishTime>01/13/2013 12:36:24</publishTime>
+      <publishTime>02/03/2013 10:39:52</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>10/07/2012 12:31:25</publishTime>
@@ -125,11 +164,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-1.7.1.min.js">
       <publishTime>10/07/2012 12:32:21</publishTime>
     </File>
+    <File Include="Scripts/jquery-1.8.2.js">
+      <publishTime>10/07/2012 00:18:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>10/07/2012 00:18:31</publishTime>
+    </File>
     <File Include="Scripts/jquery-ui-1.8.20.js">
       <publishTime>10/07/2012 12:32:27</publishTime>
     </File>
     <File Include="Scripts/jquery-ui-1.8.20.min.js">
       <publishTime>10/07/2012 12:32:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.lightbox-0.5.js">
+      <publishTime>01/22/2013 20:47:20</publishTime>
     </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.js">
       <publishTime>10/07/2012 12:31:25</publishTime>
@@ -171,28 +219,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/07/2012 12:32:30</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>01/13/2013 12:36:24</publishTime>
+      <publishTime>02/03/2013 10:56:37</publishTime>
     </File>
     <File Include="Views/Bio/Index.cshtml">
-      <publishTime>10/18/2012 20:38:52</publishTime>
+      <publishTime>01/26/2013 00:59:55</publishTime>
     </File>
     <File Include="Views/Contact/Index.cshtml">
-      <publishTime>10/18/2012 19:57:15</publishTime>
+      <publishTime>02/03/2013 10:40:17</publishTime>
+    </File>
+    <File Include="Views/Gallery/Copy of Index.cshtml">
+      <publishTime>01/22/2013 20:47:20</publishTime>
     </File>
     <File Include="Views/Gallery/Index.cshtml">
-      <publishTime>01/13/2013 12:36:24</publishTime>
+      <publishTime>02/03/2013 10:27:46</publishTime>
+    </File>
+    <File Include="Views/Home/index.cshtml">
+      <publishTime>02/03/2013 10:49:19</publishTime>
     </File>
     <File Include="Views/Press/Index.cshtml">
-      <publishTime>10/19/2012 23:41:13</publishTime>
+      <publishTime>01/28/2013 19:38:34</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/07/2012 12:31:25</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/13/2013 12:36:24</publishTime>
+      <publishTime>02/03/2013 10:44:10</publishTime>
+    </File>
+    <File Include="Views/Video/Index.cshtml">
+      <publishTime>01/26/2013 01:00:22</publishTime>
     </File>
     <File Include="Views/Voice/Index.cshtml">
-      <publishTime>10/27/2012 23:33:37</publishTime>
+      <publishTime>01/26/2013 00:59:33</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/07/2012 12:31:25</publishTime>
@@ -201,7 +258,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/07/2012 12:31:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/13/2013 14:11:14</publishTime>
+      <publishTime>02/03/2013 10:57:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

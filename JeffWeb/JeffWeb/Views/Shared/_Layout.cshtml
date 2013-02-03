@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <title>Jeffrey A Wisniewski - Actor | EMC</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Content/jquery.lightbox-0.5.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
 </head>
 
@@ -16,6 +17,7 @@
                     <img src="@Url.Content("~/Content/images/logo.gif")"/>
                 </div>
                 <nav id="Navigation">
+                    @Html.ActionLink("news","Index","News")
                     @Html.ActionLink("bio","Index","Bio")
                     <a href="@Url.Content("~/Content/Media/JeffreyAWisniewski_Resume.pdf")" target="_blank">resume</a>
                     @Html.ActionLink("gallery","Index","Gallery")
@@ -33,4 +35,6 @@
             </footer>
         </div>
     </body>
+    
+    <script src="@Url.Content("~/Scripts/jquery.lightbox-0.5.js")" type="text/javascript" ></script>
 </html>
