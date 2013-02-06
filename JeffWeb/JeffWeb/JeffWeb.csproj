@@ -90,6 +90,7 @@
     <Compile Include="Services\PhotoReader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\bio_bg.gif" />
     <Content Include="Content\images\Gallery\1.jpg" />
     <Content Include="Content\images\Gallery\2.jpg" />
     <Content Include="Content\images\Gallery\3.jpg" />
@@ -182,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Media\Photos\" />
-    <Folder Include="Content\Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

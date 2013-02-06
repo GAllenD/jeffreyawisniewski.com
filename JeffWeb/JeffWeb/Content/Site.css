@@ -5,7 +5,7 @@ body A:visited{color: #E5E5E5;text-decoration: none;}
 body A:active{color: #E5E5E5;text-decoration: none;}
 body A:hover{color: #E5E5E5;text-decoration: underline;}
 
-#Main_Container{ width: 820px;margin-left: auto; margin-right: auto}
+#Main_Container{ width: 800px;margin-left: auto; margin-right: auto}
 
 header{border-bottom: #878787 solid 2px;}
 header #Logo{ width: 200px;}
@@ -31,6 +31,15 @@ footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-
 #Contact_Content #Contact_Form input[type="submit"]:hover{ text-decoration: underline;}
 #Contact_Content #Contact_Form input[type="submit"]:focus{background-color: #E2E2E2;}
 #Contact_Content #Contact_Form input[type="submit"]:active{text-decoration: underline;}
+
+#Bio_Container {
+     background-image: url('../content/images/bio_bg.gif'); 
+     height: 654px;
+     width: 545px; 
+     padding-top: 50px;
+     padding-right: 25px;
+     padding-left: 230px;
+}
 
 td.contact_label{ text-align: right;}
 td.contact_field{ width: 300px;text-align: left;}

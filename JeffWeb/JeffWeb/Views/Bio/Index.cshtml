@@ -5,8 +5,34 @@
 }
 
 <div id="Bio_Container">
-    <img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>
-    <article>
-        @Html.Raw(Model.BioText)
-    </article>
+    @*<img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>*@
+    <div id="sliderContainer" style="overflow: hidden; height: 600px;">
+        <div id="bioArticle" style="height: auto; float: left;">
+            @Html.Raw(Model.BioText)
+        </div>
+    </div>
+    <div id="slider"></div>
 </div>
+
+<script>
+    $(function () {
+        var scrollPane = $("#sliderContainer");
+        var scrollContent = $("#bioArticle");
+
+        $('#slider').slider({
+            orientation: "vertical",
+            value: 100,
+            slide: function (event, ui) {
+                console.log(ui.value);
+                console.log(scrollPane.height());
+
+                if (scrollContent.height() > scrollPane.height()) {
+                    scrollContent.css("margin-top", (-1 * (scrollPane.height() - ((scrollPane.height() * ui.value) / 100))) + "px");
+
+                } else {
+                    scrollContent.css("margin-top", 0);
+                }
+            }
+        });
+    });
+</script>
