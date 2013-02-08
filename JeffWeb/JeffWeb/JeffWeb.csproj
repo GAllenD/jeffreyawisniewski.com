@@ -102,8 +102,11 @@
     <Content Include="Content\images\lightbox-btn-next.gif" />
     <Content Include="Content\images\lightbox-btn-prev.gif" />
     <Content Include="Content\images\lightbox-ico-loading.gif" />
+    <Content Include="Scripts\jquery.jscrollpane.css" />
     <Content Include="Content\jquery.lightbox-0.5.css" />
-    <Content Include="Content\Media\Voice\DeFacto.mp3" />
+    <Content Include="Content\Media\Voice\DeFacto.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Media\Voice\EDMC Online Course Lecture.mp3" />
     <Content Include="Content\Media\Voice\RadioSpot_IFPDA.mp3" />
     <Content Include="Content\images\audio_bg.jpg" />
@@ -116,7 +119,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Media\JeffreyAWisniewski_Resume.pdf" />
-    <Content Include="Content\Media\Voice\DeFacto.ogg" />
+    <Content Include="Content\Media\Voice\DeFacto.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Media\Voice\EDMC Online Course Lecture.ogg" />
     <Content Include="Content\Media\Voice\RadioSpot_IFPDA.ogg" />
     <None Include="Properties\PublishProfiles\Arvixe.pubxml" />
@@ -129,6 +134,7 @@
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.jscrollpane.min.js" />
     <Content Include="Scripts\jquery.lightbox-0.5.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

@@ -33,12 +33,20 @@ footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-
 #Contact_Content #Contact_Form input[type="submit"]:active{text-decoration: underline;}
 
 #Bio_Container {
-     background-image: url('../content/images/bio_bg.gif'); 
-     height: 654px;
+     /*background-image: url('../content/images/bio_bg.gif');*/ 
+     height: 550px;
      width: 545px; 
-     padding-top: 50px;
+     padding-top: 30px;
      padding-right: 25px;
      padding-left: 230px;
+}
+
+#bioArticle {
+    font-size: 10pt;
+    border-top: solid #000 1px;
+    border-bottom: solid #000 1px;
+    overflow:auto; 
+    height: 500px;
 }
 
 td.contact_label{ text-align: right;}

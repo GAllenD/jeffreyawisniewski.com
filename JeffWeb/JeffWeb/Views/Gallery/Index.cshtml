@@ -42,8 +42,15 @@
     
 </div>
 
-<script type="text/javascript">
+@section ScriptIncludes
+{
+    <script src="@Url.Content("~/Scripts/jquery.lightbox-0.5.js")" type="text/javascript" ></script>    
+
+    <script type="text/javascript">
      $().ready(function () {
          $('a.lightbox').lightBox({ fixedNavigation: true });
      });
 </script>
+}
+
+
