@@ -102,7 +102,6 @@
     <Content Include="Content\images\lightbox-btn-next.gif" />
     <Content Include="Content\images\lightbox-btn-prev.gif" />
     <Content Include="Content\images\lightbox-ico-loading.gif" />
-    <Content Include="Scripts\jquery.jscrollpane.css" />
     <Content Include="Content\jquery.lightbox-0.5.css" />
     <Content Include="Content\Media\Voice\DeFacto.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -134,8 +133,8 @@
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\jquery.jscrollpane.min.js" />
     <Content Include="Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Scripts\jquery.tinyscrollbar.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />

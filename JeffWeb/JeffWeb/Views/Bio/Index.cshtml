@@ -6,17 +6,21 @@
 
 <div id="Bio_Container">
     @*<img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>*@
-    <div id="bioArticle" class="bioArticle">
-        @Html.Raw(Model.BioText)
+    <div id="scrollbar1">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport">
+            <div class="bioArticle">
+                @Html.Raw(Model.BioText)
+            </div>
+        </div>
     </div>
 </div>
 
 @section ScriptIncludes
 {
     <script type="text/javascript">
-        $(function () {
-            $('.bioArticle').jScrollPane();
-            alert($('#bioArticle').css('overflow'));
+        $().ready(function () {
+            $('#scrollbar1').tinyscrollbar();
         });
     </script>  
 }
