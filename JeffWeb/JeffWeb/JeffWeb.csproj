@@ -124,20 +124,22 @@
     <Content Include="Content\Media\Voice\EDMC Online Course Lecture.ogg" />
     <Content Include="Content\Media\Voice\RadioSpot_IFPDA.ogg" />
     <None Include="Properties\PublishProfiles\Arvixe.pubxml" />
-    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.7.1.js" />
-    <Content Include="Scripts\jquery-1.7.1.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\jquery.lightbox-0.5.js" />
-    <Content Include="Scripts\jquery.tinyscrollbar.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <None Include="Content\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Content\Scripts\jquery-1.7.1.js" />
+    <Content Include="Content\Scripts\jquery-1.7.1.min.js" />
+    <None Include="Content\Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Content\Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Content\Scripts\jquery-1.8.2.js" />
+    <Content Include="Content\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.8.20.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Content\Scripts\jquery.tinyscrollbar.min.js" />
+    <Content Include="Content\Scripts\jquery.validate.js" />
+    <Content Include="Content\Scripts\jquery.validate.min.js" />
+    <Content Include="Content\Scripts\modernizr-2.5.3.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -148,16 +150,16 @@
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\MicrosoftAjax.js" />
-    <Content Include="Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Content\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Scripts\MicrosoftAjax.js" />
+    <Content Include="Content\Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Content\Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Content\Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Content\Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Content\Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />

@@ -7,9 +7,15 @@
 <div id="Bio_Container">
     @*<img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>*@
     <div id="scrollbar1">
-        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="scrollbar">
+            <div class="track">
+                <div class="thumb">
+                    <div class="end"></div>
+                </div>
+            </div>
+        </div>
         <div class="viewport">
-            <div class="bioArticle">
+            <div class="overview">
                 @Html.Raw(Model.BioText)
             </div>
         </div>
@@ -19,9 +25,9 @@
 @section ScriptIncludes
 {
     <script type="text/javascript">
-        $().ready(function () {
+        $(document).ready(function () {
             $('#scrollbar1').tinyscrollbar();
         });
-    </script>  
+    </script>
 }
 
