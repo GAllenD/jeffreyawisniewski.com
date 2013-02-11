@@ -5,8 +5,12 @@
 }
 
 <div id="Bio_Container">
-    @*<img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>*@
-    <div id="scrollbar1">
+    @**@
+    <div id="bio_image_pane">
+        <img id="Bio_Image" alt="Jeff" src="@Url.Content("~/Content/images/bio.jpg")"/>
+    </div>
+    <div id="bio_content">
+        <div id="scrollbar1">
         <div class="scrollbar">
             <div class="track">
                 <div class="thumb">
@@ -19,7 +23,9 @@
                 @Html.Raw(Model.BioText)
             </div>
         </div>
+    </div>    
     </div>
+    
 </div>
 
 @section ScriptIncludes
