@@ -11,7 +11,7 @@ header{border-bottom: #878787 solid 2px;}
 header #Logo{ width: 200px;}
 header #Navigation{text-align: right;}
 
-#Content_Container{}
+/*#Content_Container{}*/
 footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-top: 10px;clear: both;}
 
 #Contact_Content{}
