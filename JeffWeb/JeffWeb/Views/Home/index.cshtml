@@ -3,8 +3,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="float: left; width: 324px;">
-    <img src="@Url.Content("~/Content/Images/Left_banner_sm.jpg")"/>
+<div id="main_img_div">
+    <div id="film_link">
+        <a href="">View Reel</a>
+    </div>
 </div>
 <div style="float: right; width: 450px; padding: 10px 10px;">
     @Html.Raw(Model.HomeHtml)

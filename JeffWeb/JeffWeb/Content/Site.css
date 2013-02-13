@@ -14,6 +14,19 @@ header #Navigation{text-align: right;}
 /*#Content_Container{}*/
 footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-top: 10px;clear: both;}
 
+#main_img_div {
+    float: left; 
+    width: 324px;
+    height: 400px;
+    background-image:url('../content/images/Left_banner_sm.jpg');
+}
+
+#film_link {
+    background-color: #404040; color: #fff; margin-top: 330px; margin-left: 180px;
+    padding: 8px 0 0 20px;
+    height: 33px;
+}
+
 #Contact_Content{}
 #Contact_Content address{ font-size: 20pt;text-align: center;padding-top: 20px;padding-bottom: 20px;}
 #Contact_Content #Contact_Or_Break{ text-align: center;}
