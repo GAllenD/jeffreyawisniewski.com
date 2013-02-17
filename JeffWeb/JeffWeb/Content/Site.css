@@ -94,6 +94,10 @@ td.contact_field{ width: 300px;text-align: left;}
 #scrollbar1 { width: 520px; clear: both; margin: 20px 0 10px; }
 #scrollbar1 .viewport {width: 500px; height: 500px; overflow: hidden; position: relative; }
 #scrollbar1 .overview  { list-style: none; position: absolute; left: 0; top: 0;font-size: 10pt; }
+#scrollbar1 .overview A:link {color: rgb(2,144,248);text-decoration: none;}
+#scrollbar1 .overview A:visited{color: rgb(2,144,248);text-decoration: none;}
+#scrollbar1 .overview A:active{color: rgb(2,144,248);text-decoration: none;}
+#scrollbar1 .overview A:hover{color: rgb(2,144,248);text-decoration: underline;}
 #scrollbar1 .thumb .end,
 #scrollbar1 .thumb { background-color: #fff0f5; }
 #scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
