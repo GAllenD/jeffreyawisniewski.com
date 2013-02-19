@@ -1,4 +1,6 @@
-﻿@model Jeff.Model.View.AdminView
+﻿@using System;
+
+@model Jeff.Model.View.AdminView
 @{
     Layout = null;
 }
@@ -27,22 +29,39 @@
             </div>
             <div>
                 <h3>Videos (Vimeo)</h3>
+                @{
+                    var i = 0;
+                }
                 @foreach (var entry in Model.VideoEntries)
                 {
-                        <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new { size = 75 }) <text>Vimeo Id</text>@Html.TextBoxFor(e => entry.Value, new { size = 55 })     
-                    
+                         <text>Description:</text>
+                    <input type="text" size="75" name="VideoEntries[@i].Key" value="@entry.Key" />
+                         <text>Vimeo Id</text>
+                    <input type="text" size="75" name="VideoEntries[@i].Value" value="@entry.Value" />
+
                     <br />
+                    i++;
                 }
                 <div id="Add_Video_Placeholder"></div>
                 <span><input type="button" id="Add_Video_Button" value="Add Video"/></span>
             </div>
             <div>
                 <h3>Voice Entries</h3>
+                @{
+                    var z = 0;
+                }
                 @foreach (var entry in Model.VoiceEntries)
                 {
-                    <text>Description:</text> @Html.TextBoxFor(e => entry.Key, new { size = 75 }) <text>FileName</text>@Html.TextBoxFor(e => entry.Value, new { size = 55 })
+                         <text>Description:</text>
+                    <input type="text" size="75" name="VideoEntries[@z].Key" value="@entry.Key" />
+                         <text>FileName</text>
+                    <input type="text" size="75" name="VideoEntries[@z].Value" value="@entry.Value" />
+
                     <br />
+                    z++;
                 }
+                
+
                 <div id="Add_Vocal_Placeholder"></div>
             </div>
             <hr />
