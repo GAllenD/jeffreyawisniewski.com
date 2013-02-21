@@ -9,7 +9,7 @@ namespace JeffWeb.Services
 {
     public class PhotoReader
     {
-        private static string GALLERY_FOLDER = "/Content/media/Photos";
+        private static string GALLERY_FOLDER = "/Dev/Content/media/Photos";
 
         public List<Gallery> GetGalleries()
         {
