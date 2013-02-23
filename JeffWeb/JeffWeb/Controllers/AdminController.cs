@@ -55,11 +55,13 @@ namespace JeffWeb.Controllers
             _pageConfiguration.First(p => p.Page == PageType.Bio.ToString()).Text = form.BioText;
             _pageConfiguration.First(p => p.Page == PageType.Home.ToString()).Text = form.HomeHtml;
 
-            foreach (var entry in form.ItemEntries)
+
+
+            foreach (var entry in AdminItems.GetItemEntries(form))
             {
                 var value = _pageConfiguration.FirstOrDefault(p => p.Page == PageType.Voice.ToString() && p.MediaName == entry.Key);
-                
-                if(value == null)
+
+                if (value == null)
                 {
                     var configuration = new PageConfiguration
                     {
@@ -69,7 +71,7 @@ namespace JeffWeb.Controllers
                     };
 
                     _pageConfiguration.Add(configuration);
-                    
+
                     continue;
                 }
 

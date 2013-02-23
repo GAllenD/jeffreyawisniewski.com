@@ -1,8 +1,9 @@
-﻿@using System;
-
+﻿
 @model Jeff.Model.View.AdminView
 @{
     Layout = null;
+    var voiceIndex = 0;
+    var videoIndex = 0;
 }
 
 <!DOCTYPE html>
@@ -12,74 +13,81 @@
     <title>Jeffrey A. Wisniewski | Admin</title>
     <link href="@Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
 </head>
-    <body id="Admin_Body">
-        @using (Html.BeginForm("Save", "Admin"))
-        {
-            <div>
-                <h3>Email Address</h3>
-                @Html.TextBoxFor(m => m.EmailAddress, new { size = 50 })
-            </div>
-            <div>
-                <h3>Home Page text (supports <a href="http://www.simplehtmlguide.com/cheatsheet.php" target="_blank">Html</a>)</h3> 
-                @Html.TextAreaFor(m => m.HomeHtml, new { cols = 120, rows = 30 })
-            </div>
-            <div>
-                <h3>Bio Text (supports <a href="http://www.simplehtmlguide.com/cheatsheet.php" target="_blank">Html</a>)</h3>
-                @Html.TextAreaFor(m => m.BioText, new { cols = 120, rows = 30 })
-            </div>
-            <div>
-                <h3>Videos (Vimeo)</h3>
-                @{
-                    var i = 0;
-                }
-                @foreach (var entry in Model.VideoEntries)
-                {
-                         <text>Description:</text>
-                    <input type="text" size="75" name="VideoEntries[@i].Key" value="@entry.Key" />
-                         <text>Vimeo Id</text>
-                    <input type="text" size="75" name="VideoEntries[@i].Value" value="@entry.Value" />
+<body id="Admin_Body">
+    @using (Html.BeginForm("Save", "Admin"))
+    {
+        <div>
+            <h3>Email Address</h3>
+            @Html.TextBoxFor(m => m.EmailAddress, new { size = 50 })
+        </div>
+        <div>
+            <h3>Home Page text (supports <a href="http://www.simplehtmlguide.com/cheatsheet.php" target="_blank">Html</a>)</h3>
+            @Html.TextAreaFor(m => m.HomeHtml, new { cols = 120, rows = 30 })
+        </div>
+        <div>
+            <h3>Bio Text (supports <a href="http://www.simplehtmlguide.com/cheatsheet.php" target="_blank">Html</a>)</h3>
+            @Html.TextAreaFor(m => m.BioText, new { cols = 120, rows = 30 })
+        </div>
+        <div id="Videos">
+            <h3>Videos (Vimeo)</h3>
+            @foreach (var entry in Model.VideoEntries)
+            {
+                <text>Description:</text>
+                <input type="text" size="75" name="VideoEntries[@videoIndex].Key" value="@entry.Key" />
+                <text>Vimeo Id</text>
+                <input type="text" size="75" name="VideoEntries[@videoIndex].Value" value="@entry.Value" />
 
-                    <br />
-                    i++;
-                }
-                <div id="Add_Video_Placeholder"></div>
-                <span><input type="button" id="Add_Video_Button" value="Add Video"/></span>
-            </div>
-            <div>
-                <h3>Voice Entries</h3>
-                @{
-                    var z = 0;
-                }
-                @foreach (var entry in Model.VoiceEntries)
-                {
-                         <text>Description:</text>
-                    <input type="text" size="75" name="VideoEntries[@z].Key" value="@entry.Key" />
-                         <text>FileName</text>
-                    <input type="text" size="75" name="VideoEntries[@z].Value" value="@entry.Value" />
+                <br />
+                videoIndex++;
+            }
+            <div id="Add_Video_Placeholder"></div>
+            <span>
+                <input type="button" id="Add_Video_Button" value="Add Video" />
+            </span>
+        </div>
+        <div id="Voice">
+            <h3>Voice Entries</h3>
+            @foreach (var voiceEntry in Model.VoiceEntries)
+            {
+                <text>Description:</text>
+                <input type="text" size="75" name="VoiceEntries[@voiceIndex].Key" value="@voiceEntry.Key" />
+                <text>FileName</text>
+                <input type="text" size="75" name="VoiceEntries[@voiceIndex].Value" value="@voiceEntry.Value" />
 
-                    <br />
-                    z++;
-                }
-                
+                <br />
+                voiceIndex++;
+            }
+            <div id="Add_Vocal_Placeholder"></div>
+        </div>
+        <hr />
+        <input type="submit" value="Save" />
+    }
+</body>
 
-                <div id="Add_Vocal_Placeholder"></div>
-            </div>
-            <hr />
-            <input type="submit" value="Save" />
-        }
-    </body>
-    
-    <div id="Add_New_Vimeo" style="display: none;visibility:hidden;">
-        Description:<input type="text" name="entry.Key" size="75"/>Vimeo ID<input type="text" name="entry.Value" size="55"/>
-        <br />
-    </div>
+<div id="Add_New_Vimeo" style="display: none; visibility: hidden;">
+    Description:<input id="Add_New_Vimeo_desc" type="text" name="entry.Key" size="75" />Vimeo ID<input id="Add_New_Vimeo_Value" type="text" name="entry.Value" size="55" />
+    <br />
+</div>
 
-    <script src="@Url.Content("~/Content/Scripts/jquery-1.8.2.js")" type="text/javascript"></script> 
+<script src="@Url.Content("~/Content/Scripts/jquery-1.8.2.js")" type="text/javascript"></script>
     <script type="text/javascript">
-        $().ready(function () {
-            $("#Add_Video_Button").on("click", function (event) {
-                $('#Add_Video_Placeholder').before($('#Add_New_Vimeo').html());
+        var videoIndex = @videoIndex;
+
+        $().ready(function() {
+            $("#Add_Video_Button").on("click", function() {
+                AddVideo();
             });
-        })
+        });
+    
+        function AddVideo() {
+            $('#Add_Video_Placeholder').before($('#Add_New_Vimeo').html());
+
+            $('#Videos #Add_New_Vimeo_desc').attr('Name', 'VideoEntries[' + videoIndex + '].Key');
+            $('#Videos #Add_New_Vimeo_Value').attr('Name', 'VideoEntries[' + videoIndex + '].Value');
+            $('#Videos #Add_New_Vimeo_desc').attr('Id', 'Add_New_Vimeo_desc' + videoIndex);
+            $('#Videos #Add_New_Vimeo_Value').attr('Id', 'Add_New_Vimeo_Value' + videoIndex);
+
+            videoIndex++;
+        }
     </script>
 </html>

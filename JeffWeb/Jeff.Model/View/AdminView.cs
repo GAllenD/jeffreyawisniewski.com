@@ -16,18 +16,24 @@ namespace Jeff.Model.View
         public Dictionary<string, string> VoiceEntries { get; set; }
         public Dictionary<string, string> VideoEntries { get; set; }
 
-        public Dictionary<string,string> ItemEntries{
-            get
-            {
-                var entries = VoiceEntries;
+        
+    }
 
-                foreach (var videoEntry in VideoEntries)
+    public static class AdminItems 
+    {
+
+
+        public static Dictionary<string, string> GetItemEntries(AdminView view)
+        {
+            
+                var entries = view.VoiceEntries;
+
+                foreach (var videoEntry in view.VideoEntries)
                 {
-                    entries.Add(videoEntry.Key, videoEntry.Value);   
+                    entries.Add(videoEntry.Key, videoEntry.Value);
                 }
 
                 return entries;
-            }
         } 
     }
 }
