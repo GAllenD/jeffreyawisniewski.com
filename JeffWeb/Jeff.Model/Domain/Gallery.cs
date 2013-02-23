@@ -9,7 +9,9 @@ namespace Jeff.Model.Domain
             FileNames = new List<string>();
         }
 
+        public int Order { get; set; }
         public string Name { get; set; }
+        public string FolderName { get; set; }
 
         public List<string> FileNames { get; set; }
     }

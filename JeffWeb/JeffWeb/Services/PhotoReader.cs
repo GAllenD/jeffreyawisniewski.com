@@ -9,7 +9,13 @@ namespace JeffWeb.Services
 {
     public class PhotoReader
     {
+        #if DEBUG
+        private static string GALLERY_FOLDER = "/Content/media/Photos";
+#else
         private static string GALLERY_FOLDER = "/Dev/Content/media/Photos";
+        #endif
+
+
 
         public List<Gallery> GetGalleries()
         {
@@ -22,9 +28,12 @@ namespace JeffWeb.Services
 
             foreach (var dir in directories)
             {
+                var nameParts = dir.Name.Split('_');
                 var gallery = new Gallery
                 {
-                    Name = dir.Name
+                    Order = int.Parse(nameParts[0]),
+                    Name = nameParts[1],
+                    FolderName = dir.Name
                 };
 
                 dir.GetFiles().ToList().ForEach(f => gallery.FileNames.Add(f.Name));

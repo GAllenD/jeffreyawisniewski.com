@@ -26,7 +26,7 @@ namespace JeffWeb.Controllers
 
         public ActionResult Index()
         {
-            return View(_photoReader.GetGalleries());
+            return View(_photoReader.GetGalleries().OrderBy(g => g.Order).ToList());
         }
     }
 }

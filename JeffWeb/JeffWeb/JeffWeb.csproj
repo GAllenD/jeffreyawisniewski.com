@@ -101,11 +101,11 @@
     <Content Include="App_Data\JeffWebDB.sdf" />
     <Content Include="Content\Admin.css" />
     <Content Include="Content\images\left_banner_sm.jpg" />
-    <Content Include="Content\images\lightbox-blank.gif" />
-    <Content Include="Content\images\lightbox-btn-close.gif" />
-    <Content Include="Content\images\lightbox-btn-next.gif" />
-    <Content Include="Content\images\lightbox-btn-prev.gif" />
-    <Content Include="Content\images\lightbox-ico-loading.gif" />
+    <Content Include="images\lightbox-blank.gif" />
+    <Content Include="images\lightbox-btn-close.gif" />
+    <Content Include="images\lightbox-btn-next.gif" />
+    <Content Include="images\lightbox-btn-prev.gif" />
+    <Content Include="images\lightbox-ico-loading.gif" />
     <Content Include="Content\jquery.lightbox-0.5.css" />
     <Content Include="Content\Media\Voice\DeFacto.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -22,8 +22,8 @@
                         @:<tr>
                     }
                     <td>
-                        <a href="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/" + photo)" class="lightbox">
-                            <img class="gallery_thumb" src="@Url.Content("~/Content/Media/Photos/" + gallery.Name + "/Thumbs/" + photo)" />
+                        <a href="@Url.Content("~/Content/Media/Photos/" + gallery.FolderName + "/" + photo)" class="lightbox">
+                            <img class="gallery_thumb" src="@Url.Content("~/Content/Media/Photos/" + gallery.FolderName + "/Thumbs/" + photo)" />
                         </a>
                     </td>
                     
@@ -44,7 +44,7 @@
 
 @section ScriptIncludes
 {
-    <script src="@Url.Content("~/Scripts/jquery.lightbox-0.5.js")" type="text/javascript" ></script>    
+    <script src="@Url.Content("~/Content/Scripts/jquery.lightbox-0.5.js")" type="text/javascript" ></script>    
 
     <script type="text/javascript">
      $().ready(function () {
