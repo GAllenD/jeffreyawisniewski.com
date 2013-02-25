@@ -89,10 +89,10 @@ namespace JeffWeb.Controllers
                 value.MediaName = entry.Key;
                 value.MediaUrl = entry.Value;
 
-                foreach (var pageConfiguration in _pageConfiguration.Where(p => p.Page == PageType.Video.ToString() && form.VideoEntries.All(v => v.Key != p.MediaName)))
-                {
-                    _pageConfiguration.Remove(pageConfiguration);
-                }
+                //foreach (var pageConfiguration in _pageConfiguration.Where(p => p.Page == PageType.Video.ToString() && form.VideoEntries.All(v => v.Key != p.MediaName)))
+                //{
+                //    _pageConfiguration.Remove(pageConfiguration);
+                //}
             }
 
             foreach (var entry in form.VoiceEntries)
@@ -116,10 +116,10 @@ namespace JeffWeb.Controllers
                 value.MediaName = entry.Key;
                 value.MediaUrl = entry.Value;
 
-                foreach (var pageConfiguration in _pageConfiguration.Where(p => p.Page == PageType.Voice.ToString() && form.VoiceEntries.All(v => v.Key != p.MediaName)))
-                {
-                    _pageConfiguration.Remove(pageConfiguration);
-                }
+                //foreach (var pageConfiguration in _pageConfiguration.Where(p => p.Page == PageType.Voice.ToString() && form.VoiceEntries.All(v => v.Key != p.MediaName)))
+                //{
+                //    _pageConfiguration.Remove(pageConfiguration);
+                //}
             }
 
         }

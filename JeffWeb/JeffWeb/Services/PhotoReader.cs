@@ -9,11 +9,11 @@ namespace JeffWeb.Services
 {
     public class PhotoReader
     {
-        #if DEBUG
+#if DEBUG
         private static string GALLERY_FOLDER = "/Content/media/Photos";
 #else
         private static string GALLERY_FOLDER = "/Dev/Content/media/Photos";
-        #endif
+#endif
 
 
 

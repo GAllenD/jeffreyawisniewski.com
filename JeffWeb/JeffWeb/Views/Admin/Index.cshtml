@@ -32,6 +32,7 @@
             <h3>Videos (Vimeo)</h3>
             @foreach (var entry in Model.VideoEntries)
             {
+                <input type="hidden" name="VideoEntries[@videoIndex].PageConfigurationIdentifier" value="@entry.PageConfigurationIdentifier"/>
                 <text>Description:</text>
                 <input type="text" size="75" name="VideoEntries[@videoIndex].Key" value="@entry.Key" />
                 <text>Vimeo Id</text>
@@ -45,10 +46,11 @@
                 <input type="button" id="Add_Video_Button" value="Add Video" />
             </span>
         </div>
-        <div id="Voice">
+        <div id="Voices">
             <h3>Voice Entries</h3>
             @foreach (var voiceEntry in Model.VoiceEntries)
             {
+                <input type="hidden" name="VoiceEntries[@voiceIndex].PageConfigurationIdentifier" value="@voiceEntry.PageConfigurationIdentifier"/>
                 <text>Description:</text>
                 <input type="text" size="75" name="VoiceEntries[@voiceIndex].Key" value="@voiceEntry.Key" />
                 <text>FileName</text>
@@ -58,24 +60,37 @@
                 voiceIndex++;
             }
             <div id="Add_Vocal_Placeholder"></div>
+            <span>
+                <input type="button" id="Add_Vocal_Button" value="Add Voice" />
+            </span>
         </div>
         <hr />
         <input type="submit" value="Save" />
     }
 </body>
 
-<div id="Add_New_Vimeo" style="display: none; visibility: hidden;">
-    Description:<input id="Add_New_Vimeo_desc" type="text" name="entry.Key" size="75" />Vimeo ID<input id="Add_New_Vimeo_Value" type="text" name="entry.Value" size="55" />
-    <br />
-</div>
+    <div id="Add_New_Vimeo" style="display: none; visibility: hidden;">
+        Description:<input id="Add_New_Vimeo_desc" type="text" name="entry.Key" size="75" />Vimeo Id<input id="Add_New_Vimeo_Value" type="text" name="entry.Value" size="55" />
+        <br />
+    </div>
 
-<script src="@Url.Content("~/Content/Scripts/jquery-1.8.2.js")" type="text/javascript"></script>
+    <div id="Add_New_Voice" style="display: none; visibility: hidden;">
+        Description:<input id="Add_New_Voice_desc" type="text" name="entry.Key" size="75" />FileName<input id="Add_New_Voice_Value" type="text" name="entry.Value" size="55" />
+        <br />
+    </div>
+
+    <script src="@Url.Content("~/Content/Scripts/jquery-1.8.2.js")" type="text/javascript"></script>
     <script type="text/javascript">
         var videoIndex = @videoIndex;
+        var voiceIndex = @voiceIndex;
 
         $().ready(function() {
             $("#Add_Video_Button").on("click", function() {
                 AddVideo();
+            });
+            
+            $("#Add_Vocal_Button").on("click", function() {
+                AddVoice();
             });
         });
     
@@ -86,6 +101,17 @@
             $('#Videos #Add_New_Vimeo_Value').attr('Name', 'VideoEntries[' + videoIndex + '].Value');
             $('#Videos #Add_New_Vimeo_desc').attr('Id', 'Add_New_Vimeo_desc' + videoIndex);
             $('#Videos #Add_New_Vimeo_Value').attr('Id', 'Add_New_Vimeo_Value' + videoIndex);
+
+            videoIndex++;
+        }
+        
+        function AddVoice() {
+            $('#Add_Vocal_Placeholder').before($('#Add_New_Voice').html());
+
+            $('#Voices #Add_New_Voice_desc').attr('Name', 'VoiceEntries[' + voiceIndex + '].Key');
+            $('#Voices #Add_New_Voice_Value').attr('Name', 'VoiceEntries[' + voiceIndex + '].Value');
+            $('#Voices #Add_New_Voice_desc').attr('Id', 'Add_New_Voice_desc' + voiceIndex);
+            $('#Voices #Add_New_Voice_Value').attr('Id', 'Add_New_Voice_Value' + voiceIndex);
 
             videoIndex++;
         }
