@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Jeff.Data;
 using Jeff.Model.Domain;
 using Jeff.Model.View;
 
@@ -10,6 +11,10 @@ namespace JeffWeb.Controllers
 {
     public class PressController : ConfigurableController
     {
+        public PressController(IDataRepository repository) : base(repository)
+        {
+        }
+
         public ActionResult Index()
         {
             return View(CreateView());
@@ -24,12 +29,12 @@ namespace JeffWeb.Controllers
         {
             var pressView = new PressView();
 
-            var uniqueShows = _pageConfigurations.Select(p => p.Title).Distinct();
+            var uniqueShows = PageConfigurations.Select(p => p.Title).Distinct();
 
             foreach (var show in uniqueShows)
             {
                 var s = show;
-                var showReviews = _pageConfigurations.Where(p => p.Title == s);
+                var showReviews = PageConfigurations.Where(p => p.Title == s);
 
                 var view = new PressShow()
                 {

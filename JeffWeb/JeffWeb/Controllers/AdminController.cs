@@ -11,6 +11,10 @@ namespace JeffWeb.Controllers
     {
         private IList<PageConfiguration> _pageConfiguration;
 
+        public AdminController(IDataRepository repository) : base(repository)
+        {
+        }
+
         public override PageType Page()
         {
             return PageType.None;

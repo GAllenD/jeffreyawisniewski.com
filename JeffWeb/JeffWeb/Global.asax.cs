@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Web;
+﻿using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Ninject;
+using Ninject.Web.Common;
 
 namespace JeffWeb
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
 
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : NinjectHttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -31,15 +26,25 @@ namespace JeffWeb
 
         }
 
-        protected void Application_Start()
+        protected override void OnApplicationStarted()
         {
+            base.OnApplicationStarted();
             AreaRegistration.RegisterAllAreas();
-
-            // Use LocalDB for Entity Framework by default
-            Database.DefaultConnectionFactory = new SqlConnectionFactory(@"Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
-
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+
+
+        protected override IKernel CreateKernel()
+        {
+            var kernel = new StandardKernel();
+            RegisterServices(kernel);
+            return kernel;
+        }
+
+        private void RegisterServices(IKernel kernel)
+        {
+            kernel.Load(Assembly.GetExecutingAssembly());
         }
     }
 }

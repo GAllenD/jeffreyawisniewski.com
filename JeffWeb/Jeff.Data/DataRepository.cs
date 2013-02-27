@@ -4,7 +4,7 @@ using Jeff.Model.Domain;
 
 namespace Jeff.Data
 {
-    public class DataRepository
+    public class DataRepository : IDataRepository
     {
         private DBEntities _entities;
         public DataRepository()

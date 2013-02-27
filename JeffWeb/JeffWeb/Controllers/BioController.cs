@@ -8,11 +8,15 @@ namespace JeffWeb.Controllers
 {
     public class BioController : ConfigurableController
     {
+        public BioController(IDataRepository repository) : base(repository)
+        {
+        }
+
         public ActionResult Index()
         {
             var viewModel = new BioView
             {
-                BioText = _pageConfigurations.Single().Text
+                BioText = PageConfigurations.Single().Text
             };
 
             return View(viewModel);

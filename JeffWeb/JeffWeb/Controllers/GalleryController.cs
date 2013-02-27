@@ -11,12 +11,12 @@ namespace JeffWeb.Controllers
 {
     public class GalleryController : ConfigurableController
     {
-        private List<PageConfiguration> _pageConfigurations;
-        private PhotoReader _photoReader;
+        private readonly IPhotoReader _photoReader;
 
-        public GalleryController()
+        public GalleryController(IDataRepository repository, IPhotoReader reader)
+            : base(repository)
         {
-            _photoReader = new PhotoReader();
+            _photoReader = reader;
         }
 
         public override PageType Page()

@@ -10,14 +10,14 @@ namespace JeffWeb.Controllers
     public abstract class ConfigurableController : Controller
     {
         private const string CACHE_NAME = "PageData";
-        private DataRepository _repository;
-        protected List<PageConfiguration> _pageConfigurations;
+        private IDataRepository _repository;
+        protected List<PageConfiguration> PageConfigurations;
 
-        protected ConfigurableController()
+        protected ConfigurableController(IDataRepository repository)
         {
-            _repository = new DataRepository();
+            _repository = repository;
 
-            _pageConfigurations = GetCurrentPageConfigurations().ToList();
+            PageConfigurations = GetCurrentPageConfigurations().ToList();
 
         }
 

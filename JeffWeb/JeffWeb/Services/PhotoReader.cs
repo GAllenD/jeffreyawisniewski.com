@@ -1,21 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Web;
 using Jeff.Model.Domain;
+using Ninject.Modules;
 
 namespace JeffWeb.Services
 {
-    public class PhotoReader
+    public class PhotoReader : IPhotoReader
     {
 #if DEBUG
         private static string GALLERY_FOLDER = "/Content/media/Photos";
 #else
         private static string GALLERY_FOLDER = "/Dev/Content/media/Photos";
 #endif
-
-
 
         public List<Gallery> GetGalleries()
         {

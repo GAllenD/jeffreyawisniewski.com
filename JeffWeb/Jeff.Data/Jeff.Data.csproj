@@ -78,6 +78,7 @@
       <DependentUpon>Data.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataRepository.cs" />
+    <Compile Include="IDataRepository.cs" />
     <Compile Include="PageConfiguration.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>

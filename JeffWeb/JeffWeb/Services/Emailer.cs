@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Net.Mail;
 
-namespace JeffWeb.Models.Services
+namespace JeffWeb.Services
 {
-    public class Emailer
+    public class Emailer : IEmailer
     {
         public void Send(MailMessage email)
         {
