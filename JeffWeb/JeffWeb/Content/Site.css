@@ -17,8 +17,8 @@ footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-
 #main_img_div {
     float: left; 
     width: 324px;
-    height: 400px;
-    background-image:url('../content/images/Left_banner_sm.jpg');
+    height: 486px;
+    background-image:url('../content/images/front.jpg');
 }
 
 #film_link {
@@ -58,7 +58,7 @@ footer{ text-align: center;font-size: 8pt;border-top: #878787 solid 2px;padding-
 td.contact_label{ text-align: right;}
 td.contact_field{ width: 300px;text-align: left;}
 
-#content_audio{clear: both; height:597px;padding: 20px 20px 20px 20px;  background-image:url('../content/images/audio_bg_wide.jpg');}
+#content_audio{clear: both; height:557px;padding: 20px 20px 20px 20px;  background-image:url('../content/images/audio_bg_wide.jpg');}
 #content_audio.audio{ text-align: right;}
 /*#content_video{clear: both; width:800px;height:450px;  border-top: solid 2px; border-bottom: solid 2px; background-image:url('../images/film_bg.jpg');}*/
 

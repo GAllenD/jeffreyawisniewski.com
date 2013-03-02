@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\bio_bg.gif" />
+    <Content Include="Content\images\front.jpg" />
     <Content Include="Content\images\Gallery\1.jpg" />
     <Content Include="Content\images\Gallery\2.jpg" />
     <Content Include="Content\images\Gallery\3.jpg" />
@@ -228,7 +229,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>64772</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50718/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
