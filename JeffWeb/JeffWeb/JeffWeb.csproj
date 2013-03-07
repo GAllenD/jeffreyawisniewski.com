@@ -109,6 +109,7 @@
     <Compile Include="Services\PhotoReader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\BioPagePic.jpg" />
     <Content Include="Content\images\bio_bg.gif" />
     <Content Include="Content\images\front.jpg" />
     <Content Include="Content\images\Gallery\1.jpg" />
