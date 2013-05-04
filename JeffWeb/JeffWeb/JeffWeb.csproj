@@ -145,6 +145,7 @@
     </Content>
     <Content Include="Content\Media\Voice\EDMC Online Course Lecture.ogg" />
     <Content Include="Content\Media\Voice\RadioSpot_IFPDA.ogg" />
+    <Content Include="Content\Media\JeffreyAWisniewski_Resume_commercial.pdf" />
     <None Include="Properties\PublishProfiles\Arvixe.pubxml" />
     <None Include="Content\Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Content\Scripts\jquery-1.7.1.js" />
