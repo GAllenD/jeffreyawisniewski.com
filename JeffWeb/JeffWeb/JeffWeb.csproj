@@ -139,7 +139,7 @@
     <Content Include="Content\images\logo.gif" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Media\JeffreyAWisniewski_Resume.pdf" />
+    <Content Include="Content\Media\JeffreyAWisniewski_Resume_Legit.pdf" />
     <Content Include="Content\Media\Voice\DeFacto.ogg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
